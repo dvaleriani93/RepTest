@@ -1,0 +1,12 @@
+{
+	"include": {
+		"before": [
+			"jQuery"
+		],
+		"after": [
+		]
+	},
+	"exclude": [
+
+	]
+}

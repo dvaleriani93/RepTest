@@ -1,0 +1,20 @@
+/*CLASSI CSS ESTERNE*/
+
+.EVO-toolbar-griglia {
+    background-color: var(--EVO-background-color-evo-toolbar-griglia) !important;
+ /*   border-bottom: solid 1px var(--EVO-border-bottom-evo-toolbar-griglia) !important;*/
+    width: 96% !important;
+    border-radius: 8px 8px 0px 0px !important;
+    left: 2.4% !important;
+}
+
+.EVO-toolbar-griglia-sfondo
+{
+    left: 2.4% !important;
+}
+
+.EVO-toolbar-icone {
+    width: 40px !important;
+}
+
+/* ---------------------------------- */

@@ -1,0 +1,80 @@
+/*Root per la light mode*/
+:root {
+  --switch-background: #C4CFFA;
+  --switch-selector: #4552AC;
+  --switch-selector-hover: #4552AC;
+  --switch-selector-text: #FFF;
+  --switch-selector-text-hover: #FFF;
+  --switch-item: trasparent;
+  --switch-item-hover: trasparent;
+  --switch-item-text: #FFF;
+  --switch-item-text-hover: #FFF;
+}
+
+/*Root per la dark mode*/
+/*
+:root {
+  --switch-background: #8682A6;
+  --switch-selector: #0082E6;
+  --switch-selector-hover: #0082E6;
+  --switch-selector-text: #FFF;
+  --switch-selector-text-hover: #FFF;
+  --switch-item: trasparent;
+  --switch-item-hover: trasparent;
+  --switch-item-text: #FFF;
+  --switch-item-text-hover: #FFF;
+}
+*/
+
+
+
+
+.switch-container {
+  user-select: none;
+  background-color: var(--switch-background);
+  font-size: 15px;
+  text-align: center;
+  border-radius: 10px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.switch-item {
+  background-color: var(--switch-item);
+  color: var(--switch-item-text);
+  padding: 5px;
+  flex: 50%;
+  border-radius: 10px;
+  transition: 0.5s ease-out;
+}
+
+.switch-item:hover {
+  cursor: pointer;
+  background-color: var(--switch-item-hover);
+  color: var(--switch-item-text-hover);
+  text-decoration: underline;
+}
+
+.switch-selector {
+  z-index: 50;
+  background-color: var(--switch-selector);
+  color: white;
+  box-sizing: border-box;
+  text-align: center;
+  position: absolute;
+  left: 0px;
+  padding: 5px;
+  flex: 50%;
+  border-radius: 10px;
+  transition: 0.5s ease-out;
+
+}
+
+.switch-selector:hover {
+  cursor: not-allowed;
+  background-color: var(--switch-selector-hover);
+  color: var(--switch-selector-text-hover);
+}

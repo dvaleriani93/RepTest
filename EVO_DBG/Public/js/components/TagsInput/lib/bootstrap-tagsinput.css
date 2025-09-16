@@ -1,0 +1,70 @@
+/*Root per la lightmode*/
+:root {
+  --tagsinput-background-color: tasparent;
+  --tagsinput-text: #000;
+  --tagsinput-token-background: #4552AC;
+  --tagsinput-token-text: #FFF;
+}
+
+
+/*Root per la darkmode*/
+/*
+:root {
+  --tagsinput-background-color: tasparent;
+  --tagsinput-text: #FFF;
+  --tagsinput-token-background: #0082E6;
+  --tagsinput-token-text: #FFF;
+}
+*/
+
+.bootstrap-tagsinput {
+  color: var(--tagsinput-text);
+  background-color: var(--tagsinput-background-color);
+  text-indent: 0px;
+  font-size: 1.2em;
+  max-width: 100%;
+  cursor: text;
+  height: 100%;
+  width: calc(100% - 20px);
+  margin: 0 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+/*Campo input*/
+.bootstrap-tagsinput input {
+  border: none;
+  box-shadow: none;
+  outline: none;
+  background-color: transparent;
+  flex-grow: 1;
+  color: var(--tagsinput-text);
+}
+
+/*Token inserito correttamente*/
+.bootstrap-tagsinput .label {
+  padding: 0.5%;
+  line-height: 1;
+  border-radius: .25em;
+}
+
+.bootstrap-tagsinput .label-info {
+  background-color: var(--tagsinput-token-background);
+}
+
+.bootstrap-tagsinput .tag {
+  color: var(--tagsinput-token-text);
+}
+
+/*Bottone per la rimozione del token*/
+.bootstrap-tagsinput .tag [data-role="remove"] {
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.bootstrap-tagsinput .tag [data-role="remove"]:after {
+  content: "x";
+  padding: 0px 2px;
+}

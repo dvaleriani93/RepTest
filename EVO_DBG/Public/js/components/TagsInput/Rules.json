@@ -1,0 +1,12 @@
+{
+	"include": {
+		"before": [
+			"lib/bootstrap-tagsinput.css",
+			"lib/bootstrap-tagsinput.min.js"
+		],
+		"after": []
+	},
+	"exclude": [
+		"lib"
+	]
+}

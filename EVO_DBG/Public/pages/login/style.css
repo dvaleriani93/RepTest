@@ -1,0 +1,222 @@
+
+
+a{text-decoration: none;}
+section{margin: 10px 0;}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 10pt;
+	background-color: #FFFFFF;
+	margin: 0;
+}
+
+form {
+	width: 100%;
+	min-width: min-content;
+	height: min-content;
+}
+
+a{text-decoration: none;}
+section{margin: 10px 0;}
+
+
+.form-title {
+
+	margin-bottom: 25px;
+	margin-top: 30px;
+
+	width: 100%;
+display: flex;flex-direction: row;justify-content: space-between;align-items: center;}
+.form-title span {font-size: 25px;height: min-content;display: inline-block;}
+
+.bugBtn:has(a){
+	background-color: back;
+	border-radius: 50%;
+}
+
+.bugBtn:hover {
+	opacity: 0.7;
+	filter: alpha( opacity = 70 );
+}
+
+
+
+.loginbox {
+position: absolute;
+left: 50%;
+top: 50%;
+width: 340px;
+margin-top: -200px;
+margin-left: -170px;
+background-color: #FFF;
+border-radius: 3px;
+-ms-border-radius: 3px;
+-webkit-box-shadow: 0 2px 4px 0 #CCC;
+-moz-box-shadow: 0 2px 4px 0 #CCC;
+box-shadow: 0 2px 4px 0 #CCC;
+}
+
+
+
+
+
+
+
+
+
+
+
+.loginmsg {
+background-color: #E74C3C;
+color: #FFF;
+width: 96%;
+padding: 0 2%;
+margin-top: -10px;
+margin-bottom: 8px;
+line-height: 20pt;
+border-radius: 8px;
+}
+
+.box_left {
+float: left;
+width: 50%;
+min-width: 500px;
+}
+.box_right {
+float: left;
+width: 50%;
+height: 100%;
+min-width: 500px;
+
+}
+
+
+
+
+
+.img_right {
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.box_input_left {
+width: 350px;
+min-width: 200px;
+margin-top: 10%;
+}
+
+.rimani_connesso {
+background-color: #F5F5F5;
+border-radius: 8px;
+-ms-border-radius: 8px;
+height: 38px;
+line-height: 30px;
+margin-bottom: 8px;
+}
+.RboRicordamiCHK {
+height: 20px !important;
+width: 20px !important;
+margin-right: 10px;
+float: left;
+position: relative;
+top: 8px;
+left: 8px;
+}
+.RboRicordamiLBL {
+float: left;
+position: relative;
+top: 5px;
+}
+
+
+
+
+
+
+.fl_left {float: left;}
+.fl_right {float: right;}
+
+
+
+
+
+
+
+.buttons {
+	width: 100%;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+	line-height: 38px;
+	height: min-content;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 5px;
+}
+
+.buttons span {
+	
+	min-width: min-content;
+	padding-left: 10px;
+	padding-right: 10px;
+	cursor: pointer;
+}
+
+.rimani_connesso label {margin-left: 15px;}
+
+.pwd-recovery span{
+	color: #2F9992;
+font-size: 14px;margin-top: 9px;}
+
+/* Sezione dell'assistenza */
+.support{
+	border-top: 1px solid #BCBBC4;
+	border-bottom: 1px solid #BCBBC4;
+}
+
+.support span a{
+	color: #BCBBC4;
+}
+
+/* Sezione della versione */
+.version {
+	display: flex;
+	flex-direction: column;
+	margin: 20px 0;
+}
+
+.version span {
+	color: #BCBBC4;
+}
+
+/* Sezione dei social */
+.social {
+	color: #2F9992;
+}
+
+.social a {
+	color: #2F9992;
+	text-decoration: none;
+}
+
+.social img {
+	margin-left: 8px;
+	position: relative;
+	top: 2px;
+}
+
+
+
+@media (max-width: 1020px) {
+	.box_right{
+	display:none;
+	}
+	.box_left{
+		flex-direction: row;display: flex;
+		
+		justify-content: center;width: 100%;}
+
+
+}

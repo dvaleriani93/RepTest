@@ -1,0 +1,246 @@
+.interventiColoreOrdine{
+	color : #FF0000 !important;
+}
+
+.header-cruscotto {
+    font-size: 10pt !important;
+    font-weight: bold !important;
+    margin-left: 0px !important;
+    float: left !important;
+    margin-top: -2px !important;
+    display: block !important;
+    height: 40px !important;
+    width: 49px !important;
+    border-left: 1px solid var(--EVO-border-header-cruscotto) !important;
+}
+.header-cruscotto-WE-Festivi {
+    font-size: 10pt !important;
+    font-weight: bold !important;
+    margin-left: 0px !important;
+    float: left !important;
+    margin-top: -2px !important;
+    display: block !important;
+    height: 40px !important;
+    width: 37px !important;
+    border-left: 1px solid var(--EVO-border-header-cruscotto) !important;
+}
+.header-cruscotto-oggi{
+	color: var(--EVO-color-header-cruscotto-oggi) !important;
+}
+
+.quadrato, .quadrato-festivo, .quadrato-weekend, .quadrato-smart-working {
+    height: 27px;
+    width: 49px;
+    display: block;
+    margin-top: -3.5px;
+    float: left;
+}
+
+.border {
+    border-left: 1px solid var(--EVO-border-quadrato);
+}
+
+.quadrato-festivo, .quadrato-weekend {
+    background-color: var(--EVO-background-color-quadrato-weekend-festivo) !important;
+	width: 37px !important;
+}
+
+.quadrato-smart-working {
+    background-color: #689A6859 !important;
+}
+
+.quadrato {
+    background-color: var(--EVO-background-color-quadrato);
+}
+
+.gruppo, .sottogruppo {
+    height: 140%;
+    width: 125%;
+    display: block;
+    margin-top: -3.5px;
+    margin-left: -3.5px;
+    line-height: 175%;
+    color: #000000;
+	padding-left: 10px;
+}
+
+.gruppo {
+    background-color: var(--EVO-background-color-gruppo);
+}
+
+.sottogruppo {
+    background-color: var(--EVO-background-color-sottogruppo);
+}
+
+.gruppo-border {
+    background-color: 1px solid var(--label-field) !important;
+}
+
+.interventi, .infortunio, .malattia, .ferie, .permessi, .corsi, .visita, .assenza, .conflitto, .rilevazione, .doppi {
+    float: left;
+    height: 80%;
+    width: 100%;
+    line-height: 20px;
+    text-align: center;
+    width: 90%;
+    margin-left: 5.3%;
+	margin-top:9%
+}
+
+.hidden {
+    opacity: 0%;
+}
+
+.doppi {
+    background-color: #a17c56;
+    color: #FFFFFF;
+}
+
+.rilevazione {
+    background-color: #df243e;
+    color: #FFFFFF;
+}
+
+.pspeciali {
+    background-color: #45b73a;
+    color: #FFFFFF;
+}
+
+.interventi {
+    background-color: #0F64BF;
+    color: #FFFFFF;
+}
+
+.infortunio {
+    background-color: #EC48C3;
+    color: #FFFFFF;
+}
+
+.malattia {
+    background-color: #900202;
+    color: #FFFFFF;
+}
+
+.legenda {
+    padding: 0px;
+    margin: 0px;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+}
+
+.visita {
+    background-color: #FF7600;
+    color: #FFFFFF;
+}
+
+.corsi {
+    background-color: #03A9F4;
+    color: #FFFFFF;
+}
+
+.richiesta {
+    background-color: #FFC107;
+    color: #FFFFFF;
+}
+
+.accettata {
+    background-color: #673AB7;
+    color: #FFFFFF;
+}
+
+.errore {
+    background-color: #F44336;
+    color: #FFFFFF;
+}
+
+.micro {
+    position: relative;
+    left: 70%;
+    top: -110%;
+    height: 30%;
+    width: 30%;
+    color: #F44336;
+}
+
+.cubetto-nero-header {
+    background-color: var(--EVO-background-color-cubetto);
+    float: left;
+    margin-top: -2px;
+    height: 40px;
+    width: 8px;
+}
+
+.cubetto-nero-body {
+    background-color: var(--EVO-background-color-cubetto);
+    float: left;
+    margin: 0px;
+    margin-top: -5px;
+    height: 30px;
+    width: 8px;
+}
+
+.tabRilevazione {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    width: 70%;
+}
+
+    .tabRilevazione th {
+        width: 33%;
+        background-color: #0F4749;
+        color: #FFFFFF;
+    }
+
+    .tabRilevazione td {
+        width: 33%;
+        background-color: #cfcfcf;
+        border: 1px solid;
+        border-collapse: collapse;
+    }
+
+.assenza {
+    background-color: #FFC107;
+    color: #FFFFFF;
+}
+
+.conflitto {
+    background-color: #A146C0;
+    color: #FFFFFF;
+}
+
+.dett-ore-div {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: 26px;
+}
+
+.blue {
+    color: #0025F5;
+}
+
+.black {
+    color: #000000;
+}
+
+.blocco {
+    font-weight: bold;
+}
+
+.livello-0 {
+    color: #36C336;
+}
+
+.livello-1 {
+    color: #FFA500;
+}
+
+.livello-2 {
+    color: #F93333;
+}
+
+.livello-note {
+    color: #824FDC;
+}

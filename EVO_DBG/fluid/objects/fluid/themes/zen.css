@@ -1,0 +1,1387 @@
+
+@import url("fluid/objects/fluid/themes/fonts/font-awesome.min.css");
+
+/*****   COLOR PERSONALIZATION *****/
+
+:root {
+  --col-back-button-1: #ffffff;
+  --col-back-1: #808080;
+  --col-back-2: #f0f0f0;
+  --col-back-3: #3d5566;
+  --col-back-4: #8A9399;
+  --col-back-5: #242D33;
+  --col-back-6: #2477b3;
+  --col-back-7: #C0C0C0;
+  --col-back-8: #6899BB;
+  --col-back-9: #e2e2e2;
+  --col-back-10: #ffc125;
+  --col-back-11: #d0d0d0;
+  --col-back-12: #f5f5dc;
+
+  --col-fore-button-1: #ffffff;
+  --col-fore-text-1: #808080;
+  --col-fore-2: #f0f0f0;
+  --col-fore-3: #8A9399;
+  --col-fore-4: #242D33;
+  --col-fore-5: #000000;
+  --col-fore-7: #2477b3;
+  --col-fore-8: #C0C0C0;
+  --col-fore-9: #008000;
+  --col-fore-10: #ffc125;
+  --col-fore-11: #45E688;
+  --col-fore-12: #f53d3d;
+
+  --col-border-1: #ffffff;
+  --col-border-2: #808080;
+  --col-border-3: #f0f0f0;
+  --col-border-4: #8A9399;
+  --col-border-5: #C0C0C0;
+  --col-border-6: #e2e2e2;
+  --col-border-7: #ff0000;
+  --col-border-8: #dedede;
+  --col-border-dd: #6899BB;
+  --col-border-9: #646462;
+  --col-border-10: #ff9900;
+  --col-border-11: #8A9399;
+  --col-border-12: #d0d0d0;
+  --col-border-13: #DDDDDD;
+  --col-border-14: darkgray;
+  --col-border-15: #f53d3d;
+}
+
+
+/***** GENERAL *****/
+body
+{
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: var(--col-back-2);
+}
+
+.button.activated
+{
+  background: var(--col-back-button-1);
+}
+
+.button.generic-btn, .button.generic-btn.activated
+{
+  background-color: var(--col-back-button-1);
+  box-shadow: none;
+  border-radius: 3px;
+}
+
+.button.generic-btn:hover
+{
+  opacity: 0.7;
+}
+
+.button.generic-btn ion-icon,
+.menu-img-obj,
+.ion-menu.menu-popup button.item ion-icon,
+.indicator-image,
+.filter-popup-button,
+.sort-field-indicator-down:after,
+.sort-field-indicator-up:after,
+ion-icon[primary]
+{
+  color: var(--col-fore-text-1);
+}
+
+ion-icon.menu-img-obj,
+.ion-menu.menu-popup button.item ion-icon
+{
+  margin-top: -1px;
+}
+
+.refresher-pulling-icon>ion-icon
+{
+  color: var(--col-fore-text-1);
+}
+
+/***** SCROLLBAR SECTION *****/
+::-webkit-scrollbar-thumb
+{
+  border-radius: 7px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+/***** TOOLTIP SECTION *****/
+
+.tippy-tooltip
+{
+  background-color: var(--col-back-1);
+  color: var(--col-fore-button-1);
+}
+
+.tippy-tooltip[data-placement^=top]>.tippy-arrow
+{
+  border-top-color: var(--col-back-1);
+  bottom: -8px;
+}
+
+.tippy-tooltip[data-placement^=right]>.tippy-arrow
+{
+  border-right-color: var(--col-back-1);
+}
+
+.tippy-tooltip[data-placement^=bottom]>.tippy-arrow
+{
+  border-bottom-color: var(--col-back-1);
+  top: -8px;
+}
+
+.tippy-tooltip[data-placement^=left]>.tippy-arrow
+{
+  border-left-color: var(--col-back-1);
+}
+
+.tooltip-title
+{
+  font-weight: bold;
+  color: var(--col-fore-button-1);
+  font-size: 13px;
+}
+
+.tooltip-content,
+.tippy-content
+{
+  color: var(--col-fore-button-1);
+}
+
+.tippy-tooltip.info-theme,
+.tippy-tooltip.warning-theme,
+.tippy-tooltip.error-theme
+{
+  border: 1px solid var(--col-border-10);
+  background-color: var(--col-back-button-1);
+  font-size: 10pt;
+}
+
+.tippy-tooltip.info-theme[data-placement^=top]>.tippy-arrow,
+.tippy-tooltip.warning-theme[data-placement^=top]>.tippy-arrow,
+.tippy-tooltip.error-theme[data-placement^=top]>.tippy-arrow
+{
+  border-top-color: var(--col-border-10);
+}
+.tippy-tooltip.info-theme[data-placement^=right]>.tippy-arrow,
+.tippy-tooltip.warning-theme[data-placement^=right]>.tippy-arrow,
+.tippy-tooltip.error-theme[data-placement^=right]>.tippy-arrow
+{
+  border-right-color: var(--col-border-10);
+}
+
+.tippy-tooltip.info-theme[data-placement^=bottom]>.tippy-arrow,
+.tippy-tooltip.warning-theme[data-placement^=bottom]>.tippy-arrow,
+.tippy-tooltip.error-theme[data-placement^=bottom]>.tippy-arrow
+{
+  border-bottom-color: var(--col-border-10);
+}
+
+.tippy-tooltip.info-theme[data-placement^=left]>.tippy-arrow,
+.tippy-tooltip.warning-theme[data-placement^=left]>.tippy-arrow,
+.tippy-tooltip.error-theme[data-placement^=left]>.tippy-arrow
+{
+  border-left-color: var(--col-border-10);
+}
+
+.tippy-tooltip.error-theme .tooltip-title
+{
+  color: var(--col-fore-12);
+}
+
+.tippy-tooltip.warning-theme .tooltip-title
+{
+  color: var(--col-fore-7);
+}
+
+.tippy-tooltip.error-theme .tooltip-content,
+.tippy-tooltip.warning-theme .tooltip-content,
+.tippy-tooltip.info-theme .tooltip-content
+{
+  color: var(--col-fore-4);
+}
+
+
+/***** MAIN HEADER SECTION *****/
+.main-header
+{
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 50%);
+}
+
+.main-header .toolbar-background
+{
+  background: var(--col-back-3);
+}
+
+.main-header .bar-button-menutoggle
+{
+  color: var(--col-fore-button-1);
+}
+
+.main-header .toolbar-title
+{
+  font-size: 16pt;
+  color: var(--col-fore-button-1);
+}
+
+.main-header-cmd, .main-header-cmd-label
+{
+  color: var(--col-fore-button-1);
+}
+
+.main-header-cmd-input input
+{
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+}
+
+.main-header-cmd-input input:focus
+{
+  border-bottom: 2px solid var(--col-border-1);
+}
+
+.main-menu-toolbar-list .toolbar-cmd-btn ion-icon
+{
+  font-size: 1.8em;
+}
+
+.bar-button-default.toolbar-cmd-btn,
+.bar-button-primary.toolbar-cmd-btn
+{
+  border-radius: 3px;
+  text-transform: uppercase;
+  border: none;
+  background-color: var(--col-back-4);
+  color: var(--col-fore-button-1);
+  box-shadow: 0 1px 0 0 rgb(0 0 0 / 60%);
+}
+
+.bar-button-default.toolbar-cmd-btn:hover,
+.bar-button-primary.toolbar-cmd-btn:hover
+{
+  background-color: var(--col-back-5);
+}
+
+.bar-button-primary.toolbar-cmd-btn.bar-button-icon-left ion-icon {
+  padding-bottom: 2px;
+}
+
+ion-header.main-header .main-global-toolbar .bar-button-primary.toolbar-cmd-btn,
+ion-header.main-header .main-global-toolbar .bar-button-default.toolbar-cmd-btn
+{
+  border-radius: 3px;
+  text-transform: uppercase;
+  border: none;
+  background-color: var(--col-back-button-1);
+  color: var(--col-fore-text-1);
+  height: 30px;
+}
+
+.main-global-toolbar .bar-button-primary.toolbar-cmd-btn:hover,
+.main-global-toolbar .bar-button-default.toolbar-cmd-btn:hover
+{
+  opacity: 0.7;
+}
+
+.bar-button-default.toolbar-cmd-btn>span
+{
+  margin-top: 1px;
+}
+
+.main-global-toolbar.bottom .toolbar-cmd-btn
+{
+  box-shadow: none;
+}
+
+.main-global-toolbar:not(.bottom)
+{
+  padding: 4px;
+}
+
+.status-bar-container+.main-global-toolbar:not(.bottom)
+{
+  padding-top: 0;
+}
+
+.frame-toolbar .bar-button-default.toolbar-cmd-btn.toolbar-cmd-btn,
+.frame-toolbar .bar-button-primary.toolbar-cmd-btn.toolbar-cmd-btn
+{
+  background-color: var(--col-back-button-1);
+  box-shadow: none;
+  color: var(--col-fore-text-1);
+}
+
+.frame-toolbar .bar-button-default.toolbar-cmd-btn.toolbar-cmd-btn:hover,
+.frame-toolbar .bar-button-primary.toolbar-cmd-btn.toolbar-cmd-btn:hover
+{
+  opacity: 0.7;
+  background-color: var(--col-back-button-1);
+}
+
+
+/***** MAIN MENU SECTION *****/
+ion-split-pane.menu-right ion-menu.split-pane-side
+{
+  order: 2;
+  right: 0px;
+  left: unset;
+}
+
+.split-pane-md.split-pane-visible.main-split-pane > .split-pane-side
+{
+  max-width: 160px;
+}
+
+.main-menu-header
+{
+  color: var(--col-fore-5);
+  font-size: 11pt;
+}
+
+.main-menu-content
+{
+  background: var(--col-back-2);
+}
+
+ion-list.main-menu-list {
+  margin: 0px;
+  min-height: 35px;
+}
+
+ion-list.main-menu-list+ion-list.main-menu-list ion-list-header
+{
+  margin-top: 0px;
+}
+
+.main-menu-vertical .main-menu-list.cmd-level-1+.main-menu-list.cmd-level-1>ion-list-header
+{
+  margin-top: 0px;
+}
+
+.item.main-menu-item
+{
+  font-size: 9pt;
+  background: var(--col-back-2);
+}
+
+button.main-menu-item:not(.close-all-views-item):hover,
+button.main-menu-item.activated,
+ion-list-header.main-menu-header:not(.open-views-header):hover
+{
+  background-color: var(--col-back-6);
+  color: var(--col-fore-button-1);
+  cursor: pointer;
+}
+
+button.main-menu-item:not(.close-all-views-item):hover ion-icon.menu-img-obj,
+ion-list-header.main-menu-header:not(.open-views-header):hover > .item-inner > ion-icon.menu-img-obj
+{
+  color: var(--col-fore-button-1);
+}
+
+.main-menu-footer
+{
+  color: var(--col-fore-text-1);
+  font-size: 8pt;
+}
+
+.open-views-header
+{
+  color: var(--col-fore-text-1);
+  font-size: 9pt;
+  border-top: 2px solid var(--col-border-2);
+}
+
+.main-vertical-pane > .main-menu-horizontal
+{
+  background-color: var(--col-back-2);
+}
+
+
+.top-menu-popup .item:hover
+{
+  color: var(--col-fore-2);
+  background-color: var(--col-back-6);
+}
+
+.top-menu-popup.with-background ion-list button.item
+{
+  transition-property: none;
+}
+
+.top-menu .main-menu-header
+{
+  cursor: pointer;
+}
+
+.top-menu .main-menu-header:hover
+{
+  color: var(--col-fore-7);
+}
+
+.main-vertical-pane>.main-menu-horizontal.bottom
+{
+  background-color: var(--col-back-4);
+}
+
+.main-vertical-pane>.main-menu-horizontal.bottom .main-menu
+{
+  border-top: 2px solid var(--col-border-4);
+  border-right: 2px solid var(--col-border-4);
+  background-color: var(--col-back-2);
+}
+
+.main-menu-button
+{
+  border-right: 1px solid var(--col-border-5);
+}
+
+.main-menu-button ion-icon
+{
+  color: var(--col-fore-button-1);
+}
+
+.main-menu-list.cmd-level-2>ion-list-header
+{
+  font-size: 8pt;
+  font-weight: bold;
+}
+
+.main-menu-list.cmd-level-2>.main-menu-items-container .main-menu-item
+{
+  font-size: 8pt;
+}
+
+.main-menu-list.cmd-level-3>ion-list-header
+{
+  font-size: 8pt;
+  font-weight: bold;
+}
+
+.main-menu-list.cmd-level-3>.main-menu-items-container .main-menu-item
+{
+  font-size: 8pt;
+}
+
+.open-views-item-taskbar
+{
+  background-color: transparent;
+  border: 1px solid var(--col-border-5);
+  color: var(--col-fore-8);
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 10pt;
+}
+
+.open-views-item-taskbar.active
+{
+  background-color: var(--col-back-button-1);
+  color: var(--col-fore-text-1);
+}
+.open-views-item-taskbar.active span
+{
+  font-weight: bold;
+}
+
+.open-views-item.active
+{
+  background: var(--col-back-8);
+  color: var(--col-fore-button-1);
+}
+
+.open-views-item:not(.active):hover
+{
+  background: var(--col-back-7);
+}
+
+.close-all-views-item:hover
+{
+  background: var(--col-back-2);
+  color: var(--col-fore-7);
+}
+
+.close-all-views-item > ion-icon.item-icon
+{
+  font-size: 11pt;
+  color: var(--col-fore-text-1);
+  min-width: auto;
+  margin-right: 8px;
+}
+
+.generic-item.main-menu-item.menu-separator
+{
+  border-bottom: 1px solid var(--col-border-6);
+}
+
+.main-menu-horizontal+ion-nav .main-view-grid
+{
+  background-color: var(--col-back-2);
+}
+
+/***** MODAL SECTION ******/
+
+.modal-modal-view
+{
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 50%);
+}
+
+.modal-border-none
+{
+  border: none;
+}
+
+.modal-border-default, .modal-border-thin
+{
+  border: 1px solid var(--col-border-6);
+}
+
+.modal-border-thick
+{
+  border: 2px solid var(--col-border-6);
+}
+
+.modal-wrapper .view-navbar-buttons .view-confirm-button
+{
+  color: var(--col-fore-9);
+}
+
+/***** VIEW SECTION *****/
+
+.ion-navbar.toolbar.view-navbar
+{
+  border-bottom: 1px solid var(--col-border-11);
+  margin-bottom: 2px;
+}
+
+.view-image-ext {
+  width: 23px;
+  height: 23px;
+}
+
+.view-message-toolbar-list .view-message-container
+{
+  color: var(--col-fore-text-1);
+  font-size: 10pt;
+}
+
+.message-image ion-icon
+{
+  vertical-align: middle;
+}
+
+.view-message-container.err .message-image ion-icon
+{
+  color: var(--col-fore-12);
+}
+
+.view-message-container.info .message-image ion-icon
+{
+  color: var(--col-fore-9);
+}
+
+.view-message-container.warn .message-image ion-icon
+{
+  color: var(--col-fore-10);
+}
+
+/***** FRAME SECTION *****/
+.frame-toolbar
+{
+  background-color: var(--col-back-4);
+  color: var(--col-fore-button-1);
+  overflow: overlay hidden;
+}
+
+.frame-toolbar.subframe-toolbar.small
+{
+  background-color: var(--col-back-button-1);
+  color: var(--col-fore-text-1);
+}
+
+.frame-content.horizontal>.frame-container.frame-border:first-child
+{
+  border-right: 1px solid var(--col-border-4);
+}
+.frame-content.horizontal>.frame-container.frame-border:last-child
+{
+  border-left: 1px solid var(--col-border-4);
+}
+.frame-content:not(.horizontal)>.frame-container.frame-border:first-child
+{
+  border-bottom: 1px solid var(--col-border-4);
+}
+.frame-content:not(.horizontal)>.frame-container.frame-border:last-child
+{
+  border-top: 1px solid var(--col-border-4);
+}
+
+/********************* FRAME TOOLBAR EXPANSION ****************************/
+
+.panel-toolbar-zone
+{
+  margin: 0px 8px 0px 0;
+}
+
+.frame-container > ion-list-header.frame-toolbar
+{
+  max-height: 40px;
+  flex-wrap: wrap;
+  line-height: 40px;
+}
+
+.frame-container > ion-list-header.frame-toolbar:hover
+{
+  height: auto;
+  z-index: 100;
+  animation-name: expandToolbar;
+  animation-duration: 300ms;
+  position: absolute;
+  animation-fill-mode: both;
+}
+.frame-container > ion-list-header.frame-toolbar:hover ~ .frame-content
+{
+  margin-top: 40px;
+  animation-name: expandToolbar2;
+  animation-duration: 300ms;
+}
+
+.frame-container > ion-list-header.frame-toolbar:hover ~ .panel-pages-container.pages-visible
+{
+  margin-top: 40px;
+  animation-name: expandToolbar2;
+  animation-duration: 300ms;
+}
+
+.frame-container > ion-list-header.frame-toolbar:hover ~ .panel-pages-container.pages-visible ~ .frame-content
+{
+  margin-top: 0px;
+  animation-name: unset;
+  animation-duration: 300ms;
+}
+
+@keyframes expandToolbar
+{
+  from {
+    max-height: 40px;
+  }
+  to {
+    max-height: 120px;
+  }
+}
+@keyframes expandToolbar2
+{
+  from {
+    margin-top: 40px;
+  }
+  to {
+    margin-top: 40px;
+  }
+}
+
+.frame-container > ion-list-header.frame-toolbar.small
+{
+  max-height: 30px;
+  flex-wrap: wrap;
+  line-height: 30px;
+}
+
+.frame-container > ion-list-header.frame-toolbar.small:hover
+{
+  height: auto;
+  z-index: 100;
+  animation-name: expandToolbarSmall;
+  animation-duration: 300ms;
+  position: absolute;
+  animation-fill-mode: both;
+}
+.frame-container > ion-list-header.frame-toolbar.small:hover ~ .frame-content
+{
+  margin-top: 30px;
+  animation-name: expandToolbarSmall2;
+  animation-duration: 300ms;
+}
+
+@keyframes expandToolbarSmall
+{
+  from {
+    max-height: 30px;
+  }
+  to {
+    max-height: 120px;
+  }
+}
+@keyframes expandToolbarSmall2
+{
+  from {
+    margin-top: 30px;
+  }
+  to {
+    margin-top: 30px;
+  }
+}
+
+/***** BUTTON BAR SECTION *****/
+.item.button-bar-item
+{
+  border: 1px solid rgb(118, 118, 118);
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 10pt;
+  text-align: center;
+  border-radius: 3px;
+  background-color: rgb(239, 239, 239);
+}
+
+.item.button-bar-item:hover
+{
+  background-color: var(--col-back-9);
+}
+
+
+/***** TABBEDVIEW SECTION *****/
+ion-tabs.tabbed-view-box > ion-tabbar
+{
+  background-color: transparent;
+}
+
+ion-tabbar > a.tab-button
+{
+  background-color: var(--col-back-2);
+  color: var(--col-fore-text-1);
+}
+
+ion-tabs.tabbed-view-box:not([tabsplacement=none]) > ion-tab.tabbed-view-tab
+{
+  height: calc(100% - 35px);
+}
+
+ion-tabs.tabbed-view-box[tabsplacement=bottom] > ion-tabbar > a.tab-button
+{
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+ion-tabs.tabbed-view-box > ion-tabbar > .tab-button[aria-selected=true]
+{
+  background-color: var(--col-back-4);
+  color: var(--col-fore-button-1);
+}
+
+
+/***** TREE SECTION *****/
+.button.treenode-exp-icon,
+.button.group-exp-icon
+{
+  font-size: 6px;
+  padding: 5px;
+  padding-top: 6px;
+  color: var(--col-fore-button-1);
+  background-color: var(--col-back-1);
+}
+
+.treenode-content
+{
+  border-left: 1px solid var(--col-border-13);
+}
+
+.treenode-spacer
+{
+  border-left: 1px solid var(--col-border-13);
+}
+
+.treenode-spacer-inner
+{
+  border-bottom: 1px solid var(--col-border-13);
+}
+
+.treenode-header.treenode-sel-item
+{
+  color: var(--col-fore-4);
+  font-weight: bold;
+}
+
+.tree-drop-hover
+{
+  outline: 2px solid var(--col-border-7);
+}
+
+.treenode-header-label
+{
+  font-size: 10pt;
+}
+
+ion-item.treenode-header:hover .item-inner
+{
+  background-color: var(--col-back-9);
+}
+
+/***** PANEL SECTION *****/
+.panel-statusbar.updated:not(.small)
+{
+  background: var(--col-back-10);
+  border-radius: 3px;
+  color: #555555;
+  font-size: 1.3rem;
+}
+
+.panel-statusbar.updated.small
+{
+  color: var(--col-fore-10);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.panel-statusbar.qbe
+{
+  color: var(--col-fore-11);
+  font-weight: bold;
+}
+
+.panel-toolbar-btn
+{
+  color: var(--col-fore-text-1);
+}
+
+.top-btn, .bottom-btn
+{
+  font-size: 1rem !important;
+}
+
+.prev-btn, .next-btn
+{
+  font-size: 0.7rem !important;
+}
+
+.top-btn.small, .bottom-btn.small
+{
+  font-size: 0.8rem !important;
+}
+
+.prev-btn.small, .next-btn.small
+{
+  font-size: 0.6rem !important;
+}
+
+button.row-selector
+{
+  color: var(--col-fore-text-1);
+  font-size: 10px;
+}
+
+button.row-selector.updated
+{
+  color: var(--col-fore-10);
+}
+
+button.row-selector.error
+{
+  color: var(--col-fore-12);
+}
+
+.button.qbe-tip-btn
+{
+  background-color: transparent;
+}
+
+.button.qbe-tip-btn ion-icon
+{
+  color: var(--col-fore-button-1);
+}
+
+.row.panel-list-row.deleting-row
+{
+  outline: 1px solid var(--col-border-15);
+  outline-offset: -1px;
+  background-color: var(--col-back-12);
+}
+
+/***** PANEL GROUP SECTION *****/
+.panel-list-group
+{
+  background-color: var(--col-back-9);
+}
+
+.panel-rows-group-header .panel-list-col
+{
+  border-color: var(--col-border-12);
+  background-color: var(--col-back-9);
+  font-size: 10pt;
+}
+
+
+/***** PANEL PAGE SECTION *****/
+.panel-pages-container
+{
+  border-bottom: 1px solid var(--col-border-8);
+}
+
+.panel-page
+{
+  background-color: var(--col-back-11);
+  color: var(--col-fore-3);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.panel-page.active, .panel-page:hover
+{
+  background-color: var(--col-back-4);
+  color: var(--col-fore-button-1);
+}
+
+.panel-page ion-icon
+{
+  color: var(--col-fore-3);
+}
+
+.panel-page.active ion-icon, .panel-page.selected:hover ion-icon
+{
+  color: var(--col-fore-button-1);
+}
+
+
+/***** CONTROL SECTION *****/
+
+div.panel-form-col-header
+{
+  padding: 0px;
+}
+
+.button.control-button
+{
+  background-color: var(--col-back-4);
+  color: var(--col-fore-button-1);
+  font-size: 10pt;
+}
+
+.panel-list-col .button.control-button
+{
+  border-bottom: 1px solid var(--col-border-9);
+}
+.panel-form-col-value .button.control-button
+{
+  box-shadow: 0 1px 0 0 var(--col-border-9);
+}
+
+.button.control-button:focus:after
+{
+  outline-color: var(--col-fore-4);
+  outline-style: dashed;
+}
+
+.button.control-activator, .button.control-activator.activated
+{
+  background: transparent;
+  color: var(--col-fore-3);
+  font-size: 1rem;
+  min-width: 15px;
+}
+
+.control-combo ion-list
+{
+  border: 1px solid var(--col-border-8);
+}
+
+.control-combo .autocomplete-select-item, .control-combo .item-cover:hover
+{
+  background-color: var(--col-back-7);
+  opacity: 0.2;
+  box-shadow: var(--col-border-5) 0px -1px 0px 0px inset;
+}
+
+.item.combo-header
+{
+  background-color: var(--col-back-8);
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--col-fore-5);
+}
+
+.item.combo-group-header
+{
+  background-color: var(--col-back-1);
+  text-decoration: none;
+  color: var(--col-fore-button-1);
+}
+
+.control-combo .item.combo-item,
+.control-combo .item.combo-item.item-radio-checked
+{
+  color: inherit;
+}
+
+.control-combo .item.combo-item-disabled
+{
+  color: var(--col-fore-text-1);
+  text-decoration: none;
+  background: var(--col-back-button-1);
+}
+
+.control-checkbox .checkbox-icon:after
+{
+  outline-color: var(--col-border-2);
+  border-radius: 1px;
+}
+
+.control-blob-overlay button
+{
+  background-color: transparent;
+  color: var(--col-fore-text-1);
+}
+
+.control-blob-overlay button.activated
+{
+  box-shadow: none;
+  background: transparent;
+}
+
+.control-blob-size
+{
+  color: var(--col-fore-7);
+}
+
+.multiupload-progress
+{
+  background-image: linear-gradient(90deg, var(--col-back-3), var(--col-back-3)) !important;
+}
+
+/***** BOOK SECTION *****/
+.book-container
+{
+  border: 1px solid var(--col-border-5);
+}
+
+/***** SPAN SECTION *****/
+.book-span-file
+{
+  color: var(--col-fore-7) !important;
+}
+
+/***** MESSAGEBOX SECTION *****/
+
+.class-alertbox .alert-head
+{
+  background-color: var(--col-back-2);
+  color: var(--col-fore-text-1);
+  font-size: 14pt;
+  font-weight: 200;
+  padding: 10px 10px;
+}
+
+.class-alertbox .alert-message
+{
+  color: var(--col-fore-5);
+  padding: 10px 10px;
+}
+
+.class-alertbox .alert-button
+{
+  min-width: 80px;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 10px;
+  padding: 0;
+  border-radius: 3px;
+  font-size: 10pt;
+  font-weight: normal;
+  text-transform: uppercase;
+  border: none;
+  background-color: var(--col-back-4);
+  color: var(--col-fore-button-1);
+  cursor: pointer;
+  box-shadow: 0 1px 0 0 rgb(0 0 0 / 60%);
+}
+
+.class-alertbox .alert-button-primary
+{
+  background-color: var(--col-back-6);
+}
+
+.class-alertbox .alert-button .button-inner
+{
+  justify-content: center;
+}
+
+.class-alertbox .alert-input-group
+{
+  padding: 0px 10px;
+}
+
+.class-alertbox .alert-input
+{
+  border: 1px solid var(--col-border-2);
+  height: 18px;
+}
+
+/***** ERROR POPUP *****/
+
+.error-message-popup .alert-message
+{
+  background-color: var(--col-back-button-1);
+  color: var(--col-fore-5);
+}
+
+.error-message-popup .alert-button-group
+{
+  background-color: var(--col-back-button-1);
+}
+
+.error-message-popup .alert-button
+{
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  border-radius: 3px;
+  font-size: 10pt;
+  text-transform: uppercase;
+  background-color: var(--col-back-4);
+  color: var(--col-back-button-1);
+  cursor: pointer;
+  box-shadow: 0 1px 0 0 rgb(0 0 0 / 60%);
+}
+
+.error-message-popup .alert-button:hover
+{
+  background-color: var(--col-back-5);
+}
+
+/***** PROGRESS BAR *****/
+
+.progress-bar-body .row-progress .inner
+{
+  background-color: var(--col-back-3);
+}
+
+.loading-wrapper .alert-button-group button
+{
+  border-radius: 3px;
+  text-transform: uppercase;
+  border: none;
+  background-color: var(--col-back-4);
+  color: var(--col-fore-button-1);
+  box-shadow: 0 1px 0 0 rgb(0 0 0 / 60%);
+}
+
+.loading-wrapper .alert-button-group button:hover
+{
+  opacity: 0.8;
+}
+
+.loading-wrapper .alert-button-group button:disabled
+{
+  opacity: 0.5;
+}
+
+
+/***** FILTER POPUP SECTION *****/
+.filter-popup-navbar > .toolbar-background
+{
+  background-color: var(--col-back-4);
+}
+
+.filter-popup-title .toolbar-title, .filter-popup-navbar-buttons .bar-button
+{
+  color: var(--col-fore-button-1);
+}
+
+.filter-popup-footer-button
+{
+  background-color: var(--col-fore-button-1);
+  color: var(--col-fore-text-1);
+}
+
+.filter-popup-footer-button.main-action
+{
+  background-color: var(--col-back-8);
+  color: var(--col-fore-button-1);
+}
+
+.filter-popup-item, .filter-popup-button
+{
+  border: 1px solid var(--col-border-5);
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 10%);
+}
+
+.filter-popup-button.active, .filter-popup-button:hover, .filter-popup-footer-button:not(.main-action):hover
+{
+  background-color: var(--col-back-9)
+}
+
+.filter-popup-footer-button.main-action:hover
+{
+  background-color: var(--col-back-6);
+}
+
+.filter-popup-value-control
+{
+  border-bottom: 1px solid var(--col-back-8);
+}
+
+.filter-popup-checklist > .item:hover
+{
+  background-color: var(--col-back-2);
+}
+
+
+/***** INDICATOR SECTION *****/
+.status-bar-container
+{
+  padding: 5px;
+}
+
+.indicator-box
+{
+  height: 25px;
+  font-size: 10pt;
+  padding: 4px;
+}
+
+.status-bar-container.bottom .indicator-box
+{
+  color: var(--col-fore-button-1);
+}
+
+.status-bar-container:not(.bottom) .indicator-box
+{
+  border: 1px solid var(--col-border-6);
+  background-color: var(--col-fore-button-1);
+  color: var(--col-fore-5);
+}
+
+.status-bar-container.bottom .indicator-text:hover
+{
+  color: var(--col-fore-5);
+}
+
+.status-bar-container:not(.bottom) .indicator-text:hover
+{
+  color: var(--col-fore-3);
+}
+
+.indicator-image
+{
+  width: 15px;
+  height: 15px;
+}
+
+.status-bar-container.bottom .indicator-image
+{
+  color: var(--col-fore-button-1);
+}
+
+.indicator-image ion-icon
+{
+  font-size: 15px;
+}
+
+/*   ------------------- DRAG & DROP ------------------- */
+
+.dd-resizing-element
+{
+  outline: 2px dashed var(--col-border-dd);
+}
+
+.dd-droppable-element
+{
+  outline: 2px solid var(--col-border-dd);
+}
+
+/* ------------------------ MENU POPUP ----------------------- */
+
+.ion-menu.menu-popup.with-background button.item
+{
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  padding-left: 35px;
+  background-position: 2px 5px;
+}
+
+.ion-menu.menu-popup button.item:hover .item-inner
+{
+  background-color: var(--col-back-6);
+  color: var(--col-fore-button-1);
+}
+
+/*   ------------------- LIST FIELD POPUP ------------------- */
+
+ion-alert.popup-list-controls .alert-wrapper
+{
+  background: var(--col-back-button-1);
+  border: 1px solid var(--col-border-6);
+  border-radius: 0px;
+}
+
+ion-alert.popup-list-controls .alert-checkbox-group
+{
+  border: none;
+}
+
+ion-alert.popup-list-controls .alert-checkbox-button
+{
+  border-bottom: 1px solid var(--col-border-3);
+}
+
+ion-alert.popup-list-controls .alert-checkbox-group .alert-checkbox-icon
+{
+  border-color: var(--col-border-4);
+  background-color: var(--col-border-4);
+}
+
+ion-alert.popup-list-controls .alert-checkbox-group .alert-checkbox-label
+{
+  color: var(--col-fore-4);
+  padding: 11px 10px 10px 10px;
+
+}
+
+ion-alert.popup-list-controls .list-label-button
+{
+  background-color: var(--col-back-9);
+}
+
+ion-alert.popup-list-controls .alert-button-group .alert-button
+{
+  color: var(--col-fore-4);
+  height: 36px;
+  border-bottom: 1px solid var(--col-border-3);
+  margin: 0px;
+}
+
+ion-alert.popup-list-controls .alert-button-group .alert-button .button-inner
+{
+  justify-content: flex-start;
+}
+
+ion-alert.popup-list-controls .alert-button-group #b1.alert-button,
+ion-alert.popup-list-controls .alert-button-group #b4.alert-button,
+ion-alert.popup-list-controls .alert-button-group #b7.alert-button
+{
+  border-bottom: 1px solid var(--col-border-14);
+}
+
+ion-alert.popup-list-controls .alert-button-group .alert-button:hover,
+ion-alert.popup-list-controls .alert-checkbox-button:hover,
+ion-alert.popup-list-controls .alert-checkbox-button:hover .alert-checkbox-label
+{
+  opacity: 0.8;
+}
+
+/* --------------------------TAB LIST ------------------*/
+
+ion-alert.tab-list-controls .alert-wrapper
+{
+  border: 1px solid var(--col-back-1);
+}
+
+ion-alert.tab-list-controls .alert-button
+{
+  color: var(--col-fore-text-1);
+}
+ion-alert.tab-list-controls .alert-button:hover
+{
+  background-color: var(--col-back-7);
+}
+
+ion-alert.tab-list-controls .alert-button.active-page
+{
+  background-color: var(--col-back-4);
+  color: var(--col-fore-button-1);
+}

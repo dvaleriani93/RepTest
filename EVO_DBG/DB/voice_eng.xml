@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<Voice>
+  <LanguageTokens>
+                  the,
+                  of,
+                  at,
+                  to,
+                  by,
+                  for,
+                  from,
+                  in,
+                  with,
+                  on,
+                  a,
+                  an,
+                  the
+  </LanguageTokens>
+  <Punctuation>
+    <Mark type="single">
+      <Desc>new line</Desc>
+      <Symbol>/n</Symbol>
+    </Mark>
+    <Mark type="single">
+      <Desc>semicolon</Desc>
+      <Symbol>;</Symbol>
+    </Mark>
+    <Mark type="single">
+      <Desc>exclamation mark</Desc>
+      <Symbol>!</Symbol>
+    </Mark>
+    <Mark type="single">
+      <Desc>question mark</Desc>
+      <Symbol>?</Symbol>
+    </Mark>
+    <Mark type="single">
+      <Desc>period</Desc>
+      <Symbol>.</Symbol>
+    </Mark>
+    <Mark type="single">
+      <Desc>comma</Desc>
+      <Symbol>,</Symbol>
+    </Mark>
+    <Mark type="double">
+      <Desc>quotation mark</Desc>
+      <Symbol>"</Symbol>
+    </Mark>
+    <Mark type="single">
+      <Desc>at</Desc>
+      <Symbol>@</Symbol>
+    </Mark>
+    <Mark type="single">
+      <Desc>slash</Desc>
+      <Symbol>/</Symbol>
+    </Mark>
+  </Punctuation>
+  <CommandRecognizer context="navigation">
+    <Command tag="gotop" text="Ok. I go to the first row.">
+      <Syn>{ GO, SHOW, *};{ TOP, START };{ LIST, PANEL, FORM, TABLE, *}</Syn>
+      <Syn>{ GO, SHOW, *};{ FIRST };{ ROW, RECORD };{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="gobottom" text="Ok. I go to the last row.">
+      <Syn>{ GO, SHOW, *};{ BOTTOM };{ LIST, PANEL, FORM, TABLE, *}</Syn>
+      <Syn>{ GO, SHOW, *};{ LAST };{ ROW };{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="goup" text="Ok. I go back to previous page.">
+      <Syn>{ GO, SHOW, RETURN, *};{ BACK };{ PREVIOUS, * };{ PAGE, *};{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="godown" text="Ok. I go to the next page.">
+      <Syn>{ GO, SHOW, *};{ NEXT };{ PAGE, *};{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="golist" text="Here's the list.">
+      <Syn>{ GO, SHOW, OPEN, *};{ LIST };{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="godetail" text="Here's the detail.">
+      <Syn>{ GO, SHOW, OPEN, * };{ DETAIL };{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="gotopage" text="Here's page |1.">
+      <Syn>{ GO, SHOW, *};{ PAGE };{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="gotorow" text="Here's row |1.">
+      <Syn>{ GO, SHOW, *};{ ROW };{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="gotofield" text="Here's row |1.">
+      <Syn>{ GO, SHOW, * }; { ROW, * };{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="goNext" text="Ok. I go to the next page.">
+      <Syn>{ GO, SHOW, * };{ NEXT };{ PAGE, *}</Syn>
+    </Command>
+    <Command tag="goPrev" text="Ok. I go back to previous page.">
+      <Syn>{ GO, SHOW, * };{ PAGE } ;{ PREVIOUS }</Syn>
+      <Syn>{ GO, SHOW, * };{ BACK }</Syn>
+    </Command>
+    <Command tag="goFirst" text="Here's the first page.">
+      <Syn>{ GO, SHOW, * };{ FIRST };{ PAGE }</Syn>
+    </Command>
+    <Command tag="goLast" text="Here's the last page.">
+      <Syn>{ GO, SHOW, * };{ LAST };{ PAGE }</Syn>
+    </Command>
+    <Command tag="goPage" text="Here's page |1.">
+      <Syn>{ GO, SHOW, * };{ PAGE }</Syn>
+    </Command>
+  </CommandRecognizer>
+  <CommandRecognizer context="action">
+    <Command tag="lock" text="Ok. Panel locked.">
+      <Syn>{ LOCK };{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="unlock" text="Ok. Panel unlocked.">
+      <Syn>{ UNLOCK };{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="duplicate" text="Duplicate row |1 of the |2 panel">
+      <Syn>{ DUPLICATE, COPY };{ROW, *};{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="delete" text="Delete row |1 of the |2 panel">
+      <Syn>{ DELETE };{ ROW, * };{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="save" text="Save the |1 panel">
+      <Syn>{ SAVE };{DATA, *};{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="cancel" text="Cancel modification to the |1 panel">
+      <Syn>{ CANCEL };{MODIFICATION, *};{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="refresh" text="Refresh data of the |1 panel">
+      <Syn>{ REFRESH, UPDATE, RELOAD };{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="export" text="Export |1 panel to Excel">
+      <Syn>{ EXPORT };{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="print" text="Print the |1 panel">
+      <Syn>{ PRINT };{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="cancelSelection" text="Cancel selection in the |1 panel">
+      <Syn>{ CANCEL, CLEAR };{ SELECTION };{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="selectAll" text="Select all rows.">
+      <Syn>{ SELECT };{ ALL };{ ROWS, * };{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="invertSelection" text="Invert selection.">
+      <Syn>{ INVERT };{ SELECTION };{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="insert" text="Ok. Row inserted.">
+      <Syn>{ ADD, INSERT };{ FIELD, * };{NEW, *};{ ROW, * };{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="write" text="Ok. Row modified.">
+      <Syn>{ WRITE, MODIFY, RIGHT, CHANGE, * };{ FIELD, * };{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="duplicateRow" text="Duplicate row.">
+      <Syn>{ DUPLICATE, COPY };{ROW, *};{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="deleteRow" text="Ok. Row deleted.">
+      <Syn>{ DELETE };{ ROW, * };{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="select" text="Ok. Rows selected.">
+      <Syn>{ SELECT };{ ROW, ROWS, * };{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="run" text="Ok.">
+      <Syn>{ OPEN, RUN, * };{ PROCEDURE, FUNCTION, * }</Syn>
+    </Command>
+    <Command tag="find" text="I found |1 results.">
+      <Syn>{ FIND, SEARCH };{ALL, EVERY, *};{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="close" text="Close the form |1 ">
+      <Syn>{ CLOSE };{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="closeAll" text="Close all the forms.">
+      <Syn>{ CLOSE };{ ALL };{ LISTS, PANELS, FORMS, TABLES, *}</Syn>
+    </Command>
+    <Command tag="open" text="Open the form |1">
+      <Syn>{ OPEN, * };{ LIST, PANEL, FORM, TABLE, *}</Syn>
+    </Command>
+    <Command tag="stop" text="">
+      <Syn>{ STOP };</Syn>
+    </Command>
+    <Command tag="findBook" text="Ok. I found |1 results.">
+      <Syn>{ FIND, SEARCH };{ ALL, *};{ REPORT, BOOK, * }</Syn>
+    </Command>
+    <Command tag="read" text="|1.">
+      <Syn>{ WHAT };{IS, ARE, *}</Syn>
+      <Syn>{ READ}</Syn>
+    </Command>
+    <Command tag="count" text="|1.">
+      <Syn>{ HOW };{ MUCH }</Syn>
+      <Syn>{ HOW };{ MANY }</Syn>
+    </Command>
+    <Command tag="readBook" text="|1.">
+      <Syn>{ WHAT };{IS, ARE, *}</Syn>
+      <Syn>{ READ }</Syn>
+    </Command>
+    <Command tag="deleteField" text="Ok. I've deleted the field.">
+      <Syn>{ DELETE };{ FIELD }</Syn>
+    </Command>
+  </CommandRecognizer>
+</Voice>

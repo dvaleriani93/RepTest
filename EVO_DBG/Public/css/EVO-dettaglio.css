@@ -1,0 +1,472 @@
+﻿    /*
+█▀▄ █▀▀ ▀█▀ ▀█▀ ▄▀█ █▀▀ █░░ █ █▀█
+█▄▀ ██▄ ░█░ ░█░ █▀█ █▄█ █▄▄ █ █▄█*/
+    /*Sia Bloccati che Sbloccati, il bordo per alcuni sbloccati (tipo le checkbox che non cambiano css) le vado prendere da qua --> VALORE
+Tecnicamente per quanto riguarda le checkbox (o altre tipologie di campo) di norma prendono subito l'evo-bloccato o sbloccato (dipende se il programmatore
+scrive dentro alla load locked=true locked=false) questa classe nasce per le cose standard*/
+    /*
+█▀▀ █░█ █▀ ▀█▀ █▀█ █▀▄▀█ ░ █▀▀ █▀ █▀
+█▄▄ █▄█ ▄█ ░█░ █▄█ █░▀░█ ▄ █▄▄ ▄█ ▄█*/
+    
+.panel-field-value-form.blob-upload {
+    text-indent: 0px !important;
+}
+/*contenuto*/
+.panel-blob-image {
+
+}
+
+.panel-field-value-form {
+border: 1px solid var(--EVO-border-panel-field-value-form) !important;
+transition: 0.2s !important;
+border-radius: 6px !important;
+font-style: inherit !important;
+text-indent: 6px !important; /*--> Questa minchiata faceva lo spazione dal bordo solo sulla prima riga, quando il testo va a capo fa schifo*/
+/*padding-left: 6px !important; --> Questa merda invece allunga il campo e sfancula le liste e le checkbox... È comunque questa la soluzione giusta, ma va rivista con un po' di tempo*/
+background-color: var(--EVO-background-color-panel-field-value-form) !important;
+color: var(--EVO-color-panel-field-value-form) !important;
+/*il color per gli sbloccati non ho potuto metterlo nel panel-value-input.panel-field-value-form perchè avrebbe vinto sul watermark*/
+}
+
+/*Bloccati --> VALORE (per quanto riguarda le checkbox)*/
+.panel-field-value-form.EVO-bloccato {
+color: var(--EVO-color-panel-value-input-panel-field-value-form-evo-bloccato) !important;
+border: 1px solid var(--EVO-border-panel-field-value-form-evo-bloccato) !important;
+font-family: 'OpenSans-Regular' !important;
+background-color: var(--EVO-background-color-panel-field-value-form-evo-bloccato) !important;
+padding-right: 5px;
+}
+
+/*Sbloccati --> VALORE (per quanto riguarda le checkbox)*/
+.panel-field-value-form.EVO-sbloccato {
+border: 1px solid var(--EVO-border-panel-field-value-form-evo-sbloccato) !important;
+font-family: 'OpenSans-SemiBold' !important;
+}
+
+/*Sbloccati --> VALORE (sarebbero anche i bloccati se uso pan.locked=true, ecco perche ho messo la class sbloccato/bloccato*/
+.panel-value-input.panel-field-value-form {
+border: 1px solid var(--EVO-border-panel-field-value-form-evo-sbloccato) !important;
+font-family: 'OpenSans-SemiBold' !important;
+padding-right: 5px;
+}
+.panel-field-value-form.EVO-border-none{
+border: none !important;
+}
+
+/*Bloccati --> VALORE, è una casistica strana, avviene quando blocchi un campo data/lista etc...*/
+.panel-value-input.panel-field-value-form.EVO-bloccato {
+color: var(--EVO-color-panel-value-input-panel-field-value-form-evo-bloccato) !important;
+border: 1px solid var(--EVO-border-panel-value-input-panel-field-value-form-evo-bloccato) !important;
+font-family: 'OpenSans-Regular' !important;
+background-color: transparent !Important;
+cursor: default !important;
+}
+
+/*Classe Dummy utile per avere un campo invisibile su cui spostare il focus*/
+.EVO_Dummy.panel-value-input.panel-field-value-form {
+    border: none !important;
+    cursor: default;
+    caret-color: transparent;
+    color: transparent !important;
+    background-color: var(--EVO-background-color-panel-field-value-form-evo-bloccato) !important;
+}
+    
+
+/*Sbloccati Watermark --> VALORE*/
+.panel-field-value-watermark {
+font-style: italic !important;
+color: var(--EVO-color-panel-field-value-watermark) !important;
+font-family: 'OpenSans-Regular' !important;
+}
+
+/*Sbloccati (saranno sempre sbloccati) per le Liste Valori e Date --> VALORE*/
+.combo-activator, .panel-value-activator {
+margin-left: -6px;
+padding-right: 6px;
+line-height: 18px;
+/* margin-left: -3px;*/
+background-size: 15px;
+border-top: 1px solid var(--EVO-border-top-combo-activator-panel-value-activator) !important;
+border-bottom: 1px solid var(--EVO-border-bottom-combo-activator-panel-value-activator) !important;
+border-right: 1px solid var(--EVO-border-right-combo-activator-panel-value-activator) !important;
+border-radius: 0px 6px 6px 0px !important;
+background-color: var(--EVO-background-color-combo-activator-panel-value-activator) !important;
+}
+
+.EVO-icnCerca {
+border-radius: 6px 0px 0px 6px !important;
+margin-left: 9px;
+text-indent: 5px;
+z-index: 50 !important;
+line-height: 20px;
+}
+
+.EVO-icnCerca.EVO-bloccato {
+border-top: 1px solid var(--EVO-border-panel-field-value-form-evo-bloccato) !important;
+border-bottom: 1px solid var(--EVO-border-panel-field-value-form-evo-bloccato) !important;
+border-left: 1px solid var(--EVO-border-panel-field-value-form-evo-bloccato) !important;
+background-color: var(--EVO-background-color-panel-field-value-form-evo-bloccato) !important;
+}
+
+.EVO-icnCerca.EVO-sbloccato {
+border-top: 1px solid var(--EVO-border-panel-field-value-form-evo-sbloccato) !important;
+border-bottom: 1px solid var(--EVO-border-panel-field-value-form-evo-sbloccato) !important;
+border-left: 1px solid var(--EVO-border-panel-field-value-form-evo-sbloccato) !important;
+background-color: var(--EVO-background-color-combo-activator-panel-value-activator) !important;
+}
+
+/*Bloccati --> VALORE*/
+.panel-field-value-form.panel-value-html {
+border: 1px solid var(--EVO-border-panel-field-value-form-panel-value-html) !important;
+font-family: 'OpenSans-Regular' !important;
+color: var(--EVO-color-panel-field-value-form-panel-value-html) !important;
+}
+.panel-field-value-form.panel-value-html.EVO-bloccato {
+    color: var(--EVO-color-panel-value-input-panel-field-value-form-evo-bloccato) !important;
+    border: 1px solid var(--EVO-border-panel-field-value-form-evo-bloccato) !important;
+    font-family: 'OpenSans-Regular' !important;
+    background-color: var(--EVO-background-color-panel-field-value-form-evo-bloccato) !important;
+    }
+
+/*Sia Bloccati che Sbloccati --> CAPTION, non il valore*/
+.panel-field-caption-form {
+padding: 2px !important;
+background: var(--EVO-background-panel-field-caption-form) !important;
+border-bottom: 0px solid !important;
+color: var(--EVO-color-panel-field-caption-form) !important;
+text-align: left !important;
+font-family: 'OpenSans-Regular' !important;
+}
+
+.panel-field-caption-form.EVO-bloccato{
+color: var(--EVO-color-panel-field-caption-form-bloccato) !important;
+}
+
+.panel-field-caption-form.EVO-bloccato.EVO-semi-bloccato {
+color: var(--EVO-color-panel-field-caption-form) !important;
+}
+.panel-field-value-form.EVO-bloccato.EVO-semi-bloccato {
+color: var(--EVO-color-panel-value-input-panel-field-value-form-evo-bloccato) !important;
+border: 1px solid var(--EVO-border-panel-field-value-form-evo-bloccato) !important;
+font-family: 'OpenSans-Regular' !important;
+background-color: var(--EVO-background-color-panel-field-value-form-evo-bloccato) !important;
+}
+
+/*Serve per le iniziali di un nome nel dettaglio dell'anagrafica*/
+    [data-letters]:before {
+    content:attr(data-letters);
+    display:inline-block;
+    font-size: 50px;
+    width: 100%;
+    height: 100%;
+    line-height: 145px;
+    letter-spacing: 1px;
+    border-radius:50%;
+    background: #C4CFFA;
+    font-family: 'OpenSans-Regular';
+    color: white;
+    }
+    
+.EVO-dettaglio-left{
+background-color: var(--EVO-background-color-evo-dettaglio-left) !important;
+color: #efefef  !important;
+}
+
+.EVO-dettaglio-left-text-primario{
+font-size: 18px !important;
+font-family:"OpenSans-Bold" !important;
+color: var(--EVO-color-EVO-dettaglio-left-text-primario) !important;
+}
+
+.EVO-dettaglio-left-text-titolo{
+font-family:"OpenSans-Bold" !important;
+font-size: 13px !important;
+color: var(--EVO-color-EVO-dettaglio-left-text-titolo) !important;
+}
+
+.EVO-dettaglio-left-text{
+font-family:"OpenSans-SemiBold" !important;
+font-size: 13px !important;
+color: var(--EVO-color-EVO-dettaglio-left-text) !important;
+/*color: #efefef !important;*/
+}
+
+.EVO-dettaglio-left-icon{
+font-size: 20px !important;
+}  
+
+.EVO-sottotitolo {
+color: var(--EVO-sottotitolo-color) !important;
+font-family: 'OpenSans-SemiBold' !important;
+font-size: 120% !important;
+}
+
+/*
+/*
+█▀▀ █ █▄░█ █▀▀   █▀▀ █░█ █▀ ▀█▀ █▀█ █▀▄▀█ ░ █▀▀ █▀ █▀
+█▀░ █ █░▀█ ██▄   █▄▄ █▄█ ▄█ ░█░ █▄█ █░▀░█ ▄ █▄▄ ▄█ ▄█*/
+/*
+█▀▀ █ █░░ ▀█▀ █▀█ █
+█▀░ █ █▄▄ ░█░ █▀▄ █*/
+
+.EVO-titoli-sfondo {
+width: 96% !important;
+left: 1.4% !important;
+}
+.EVO-modal    .EVO-titoli-sfondo {
+width: 98% !important;
+left: 0.8% !important;
+}
+
+.EVO-titolo-tab {
+color: var(--menu-left-color) !important;
+font-family: 'OpenSans-SemiBold' !important;
+font-size: 150% !important;
+}
+
+.EVO-filtri-sfondo {
+background-color: var(--EVO-background-color-evo-filtri-sfondo) !important;
+border-radius: 8px;
+width: 96% !important;
+left: 2.4% !important;
+}
+
+.EVO-modal .EVO-filtri-sfondo{
+background-color: var(--EVO-background-color-evo-filtri-sfondo) !important;
+border-radius: 8px;
+width: 98% !important;
+left: 0.8% !important;
+}
+/*
+.EVO-filtri-font-header {
+font-family: 'OpenSans-SemiBold' !important;
+color: #1F1F1F !important;
+font: normal normal 600 12px/17px Open Sans;
+font-size: 17px !important;
+}*/
+/*.EVO-filtri-font-valore {
+transition: 0.5s !important;
+background-color: #ffffff !important;
+font-family: 'OpenSans-SemiBold' !important;
+border: 1px solid #C4CFFA !important;
+border-radius: 4px !important;
+color: #707070 !important;
+font-style: inherit !important;
+text-indent: 15px !important;
+}
+*/
+/*.EVO-filtri-font-valore-mod {
+transition: 0.5s !important;
+background-color: #869EF21A !important;
+font-family: 'OpenSans-Bold' !important;
+border: 1px solid #C4CFFA !important;
+border-radius: 4px !important;
+color: #1F1F1F !important;
+font-style: inherit !important;
+text-indent: 15px !important;
+}*/
+
+.EVO-collassa-filtri {
+font-family: 'OpenSans-SemiBold' !important;
+color: var(--EVO-color-evo-collassa-filtri) !important;
+}
+
+.EVO-filtri-sfondo-top {
+background-color: var(--EVO-background-color-evo-filtri-sfondo-top) !important;
+border-radius: 8px 8px 8px 8px;
+width: 96% !important;
+left: 2.4% !important;
+padding-bottom: 10px;
+z-index: 10000;
+}
+.EVO-modal    .EVO-filtri-sfondo-top {
+background-color: var(--EVO-background-color-evo-filtri-sfondo-top) !important;
+border-radius: 8px 8px 8px 8px;
+width: 98% !important;
+left: 0.8% !important;
+padding-bottom: 10px;
+z-index: 10000;
+}
+
+.EVO-filtri-sfondo-top-large {
+background-color: var(--EVO-background-color-evo-filtri-sfondo-top) !important;
+border-radius: 8px 8px 8px 8px;
+width: 97.8% !important;
+left: 1.4% !important;
+padding-bottom: 10px;
+z-index: 10000;
+}
+
+.EVO-modal  .EVO-filtri-sfondo-top-large {
+background-color: var(--EVO-background-color-evo-filtri-sfondo-top) !important;
+border-radius: 8px 8px 8px 8px;
+width: 98% !important;
+left: 0.8% !important;
+padding-bottom: 10px;
+z-index: 10000;
+}
+.EVO-filtri-sfondo-bottom {
+background-color: var(--EVO-background-color-evo-filtri-sfondo-bottom) !important;
+width: 96% !important;
+left: 2.4% !important;
+padding-bottom: 10px !important;
+}
+.EVO-modal .EVO-filtri-sfondo-bottom{
+background-color: var(--EVO-background-color-evo-filtri-sfondo-bottom) !important;
+width: 98% !important;
+left: 0.8% !important;
+padding-bottom: 10px !important;
+}
+
+.EVO-filtri-sfondo-bottom-large {
+background-color: var(--EVO-background-color-evo-filtri-sfondo-bottom) !important;
+border-radius: 0px 0px 8px 8px;
+width: 97.8% !important;
+left: 1.4% !important;
+}
+
+.EVO-modal   .EVO-filtri-sfondo-bottom-large {
+background-color: var(--EVO-background-color-evo-filtri-sfondo-bottom) !important;
+border-radius: 0px 0px 8px 8px;
+width: 98% !important;
+left: 0.8% !important;
+}    
+.EVO-filtro-generale-lista {
+background-color: var(--menu-left-color-title) !important;
+border-radius: 20px 0px 0px 20px !important;
+font-family: 'OpenSans-SemiBold' !important;
+color: var(--filtro-generale-font) !important;
+font-style: inherit !important;
+font-size: 105% !important;
+border: 0px !important;
+}
+
+.EVO-filtro-generale-lista+.combo-activator {
+background-color: var(--EVO-background-color-evo-filtro-generale-lista) !important;
+font-family: 'OpenSans-SemiBold' !important;
+background-image: url(../images/adco.gif) !important;
+border-radius: 0px !important;
+font-style: inherit !important;
+font-size: 110% !important;
+border: 0px !important;
+width: 25px !important;
+}
+
+.EVO-filtro-generale-cerca {
+background-color: var(--EVO-background-color-evo-filtro-generale-cerca) !important;
+border-radius: 0px 20px 20px 0px !important;
+padding: 1px !important;
+font-family: 'OpenSans-SemiBold' !important;
+line-height: 43px !important;
+color: var(--EVO-color-EVO-filtro-generale-cerca) !important;
+align-content: start !important;
+text-indent: 15px !important;
+border: 0px !important;
+font-style: inherit !important;
+}
+
+.EVO-font-cancella-filtri {
+font-family: 'OpenSans-SemiBold' !important;
+color: var(--EVO-color-EVO-font-cancella-filtri);
+}
+/*
+█▀▀ █ █▄░█ █▀▀   █▀▀ █ █░░ ▀█▀ █▀█ █
+█▀░ █ █░▀█ ██▄   █▀░ █ █▄▄ ░█░ █▀▄ █*/
+
+.EVO-icona-search {
+margin-left: 3px;
+margin-top: 1px;
+}
+
+.EVO-foto-profilo {
+width: 100%; /* la larghezza del div sarà uguale alla larghezza del contenitore padre */
+height: 100%; /* l'altezza del div si adatterà automaticamente all'altezza dell'immagine */
+}
+
+.EVO-foto-profilo img {
+width: 100%; /* l'immagine occuperà l'intera larghezza del div */
+height: 100%; /* l'altezza dell'immagine si adatterà automaticamente alla larghezza del div */
+display: block; /* per evitare spazi vuoti sotto l'immagine */
+object-fit: cover;
+border-radius: 50%;
+cursor: pointer;
+}
+
+[data-letters]:before {
+    content:attr(data-letters);
+    display:inline-block;
+    font-size: 50px;
+    width: 100%;
+    height: 100%;
+    line-height: 145px;
+    letter-spacing: 1px;
+    border-radius:50%;
+    background: #C4CFFA;
+    font-family: 'OpenSans-Regular';
+    color: white;
+    }
+
+.EVO-modal{
+background: var(--EVO-background-body) !important;
+}
+
+.ideditor-toolbar .combo-input{
+text-indent: 0px !important;
+margin-left: 2px !important;
+}
+
+.ideditor-toolbar {
+background-color: var(--EVO-background-color-caption-list) !important;
+border-radius: 8px 8px 0 0 !important;
+z-index: 1 !important;
+}
+
+.EVO-bloccato.ideditor-body{
+border: 1px solid var(--EVO-border-evo-bloccato-ideditor-body) !important;
+margin: 0px 0px 0px 0px !important;	
+background-color: var(--EVO-background-color-EVO-bloccato-ideditor-body) !important;
+}
+
+.EVO-sbloccato.ideditor-body{
+margin: 0px 0px 0px -1px;	
+background-color: var(--EVO-background-color-evo-sbloccato-ideditor-body) !important;
+}
+
+.ideditor-body{
+border-radius: 4px;
+z-index: 0 !important;
+border: 1px solid var(--EVO-border-evo-ideditor-body) !important;}
+
+.EVO-editor-toolbar {
+width: 98.7% !important;
+margin: -5px 0px 0px 0px !important;
+}
+
+.EVO-text-sopracampo {
+color: var(--EVO-color-text-sopracampo) !important;
+font-size: 8pt !important;
+text-align: right !important;
+line-height: 22pt;
+}
+
+.EVO-text-info {
+color: var(--EVO-color-text-sopracampo) !important;
+font-size: 10pt !important;
+}
+
+.EVO-icona-caption{
+font-size: 13px !important;
+/*color:var(--EVO-color-panel-field-static);*/
+}
+
+.EVO-icona-caption.required {
+padding-left: 15px !important;
+}
+.EVO-icona-caption.percentuale  {
+margin-left:-15px !important;
+}
+
+
+/*
+█▀▀ █ █▄░█ █▀▀   █▀▄ █▀▀ ▀█▀ ▀█▀ ▄▀█ █▀▀ █░░ █ █▀█
+█▀░ █ █░▀█ ██▄   █▄▀ ██▄ ░█░ ░█░ █▀█ █▄█ █▄▄ █ █▄█*/

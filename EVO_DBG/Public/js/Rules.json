@@ -1,0 +1,15 @@
+{
+	"include": {
+		"before": [
+			"libs",
+			"custom.js"
+		],
+		"after": [
+			"components"
+		]
+	},
+	"exclude": [
+		"login.js",
+		"afterClientLoad.js"
+	]
+}

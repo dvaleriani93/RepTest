@@ -1,0 +1,331 @@
+/* ************************************************
+// Instant Developer RD3 Framework
+// (c) 1999-2009 Pro Gamma Srl - All rights reserved
+//
+// Foglio di stile per gli elementi RD3
+// specifico per il browser Safari
+// ************************************************/
+
+/* Uso il mio focus-box */
+:focus { outline: none; }
+:active { outline: none; }
+
+textarea
+{
+  resize: none;
+}
+
+#header-main-caption
+{
+  line-height: 28px;
+}
+
+.panel-value-image
+{
+	padding-top: 2px;
+	vertical-align: -4px;
+}
+
+.panel-toolbar-zone
+{
+	height: 20px;
+	display: inline-block;
+	vertical-align: middle;
+	padding-top: 0px;
+}
+
+.panel-toolbarsmall-zone
+{
+	height: 20px;
+	line-height: 20px;
+	display: inline-block;
+	vertical-align: middle;
+	padding-top: 0px;
+}
+
+.book-toolbar-button
+{
+	vertical-align: middle;
+}
+.book-toolbar-button-down
+{
+	vertical-align: middle;
+}
+
+.book-toolbar-button-hover
+{
+	vertical-align: middle;
+}
+
+.book-toolbar-button-small
+{
+	vertical-align: middle;
+}
+
+.book-toolbar-button-small-down
+{
+	vertical-align: middle;
+}
+
+.book-toolbar-button-small-hover
+{
+	vertical-align: middle;
+}
+
+.panel-toolbar-button
+{
+	vertical-align: middle;
+}
+
+.panel-toolbar-button-down
+{
+	vertical-align: middle;
+}
+
+.panel-toolbar-button-hover
+{
+	vertical-align: middle;
+}
+
+.panel-toolbar-button-small
+{
+	vertical-align: middle;
+}
+
+.panel-toolbar-button-small-down
+{
+	vertical-align: middle;
+}
+
+.panel-toolbar-button-small-hover
+{
+	vertical-align: middle;
+}
+
+.frame-toolbar-button
+{
+	vertical-align: middle;
+}
+
+.frame-toolbar-button-hover
+{
+	vertical-align: middle;
+}
+
+.frame-toolbar-button-down
+{
+	vertical-align: middle;
+}
+
+.frame-toolbar-button-small
+{
+	vertical-align: middle;
+}
+
+.frame-toolbar-button-small-hover
+{
+	vertical-align: middle;
+}
+
+.frame-toolbar-button-small-down
+{
+	vertical-align: middle;
+}
+
+.toolbar-command
+{
+  vertical-align: middle;
+}
+
+.toolbar-command-hl
+{
+  vertical-align: middle;
+}
+
+.toolbar-command-showcaption-hl
+{
+  vertical-align: middle;
+}
+
+.toolbar-command-showcaption
+{
+  vertical-align: middle;
+}
+
+.toolbar-image
+{
+  vertical-align: middle;
+}
+
+.frame-toolbar-caption
+{
+	height: 24px;
+	line-height: 22px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.panel-status-qbe
+{
+  height: 24px;
+  line-height: 22px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.panel-status-data
+{
+  height: 24px;
+	line-height: 22px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.panel-status-updated
+{
+	height: 24px;
+	line-height: 22px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.frame-toolbarsmall-caption
+{
+	height: 20px;
+	line-height: 18px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.panel-statussmall-qbe
+{
+  height: 20px;
+	line-height: 18px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.panel-statussmall-data
+{
+  height: 20px;
+	line-height: 18px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.panel-statussmall-updated
+{
+	height: 20px;
+	line-height: 18px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.book-toolbar-status
+{
+  height: 24px;
+	line-height: 22px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.book-toolbarsmall-status
+{
+  height: 20px;
+	line-height: 18px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.taskbar-toolbar-command
+{
+  vertical-align: -4px;
+}
+
+.taskbar-form-list-caption
+{
+  vertical-align: top;
+}
+
+.panel-toolbarsmall-qbetip
+{
+  vertical-align: -4px;
+}
+
+.toolbar-frame-container
+{
+  vertical-align: -1px;
+}
+
+.menu-commandset-level-3
+{
+	margin-top: -2px;
+}
+
+.toolbar-form-container
+{
+  vertical-align: -4px;
+}
+
+.toolbar-button
+{
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.toolbar-main-button
+{
+  vertical-align: -1px;
+}
+
+#ImgList
+{
+  top: 0px !important;
+  left: 0px !important;
+  height: 1px !important;
+  width: 1px !important;
+  z-index: -9999;
+  overflow: hidden;
+  position: absolute;
+}
+#BckImgList
+{
+  top: 0px !important;
+  left: 0px !important;
+  height: 1px !important;
+  width: 1px !important;
+  z-index: -9999;
+  overflow: hidden;
+  position: absolute;
+}
+#traylet-frame
+{
+  top: 0px !important;
+  left: 0px !important;
+  height: 1px !important;
+  width: 1px !important;
+  z-index: -9999;
+  overflow: hidden;
+  position: absolute;
+}
+
+.book-span-combo
+{
+  height: auto !important;
+  margin-top: 2px;
+}
+
+.book-toolbar-button, .book-toolbar-button-hover, .book-toolbar-button-down
+{
+  vertical-align: top;
+}
+
+.toolbar-frame-image, .toolbar-frame-image-hl
+{
+  vertical-align: top;
+}
+
+.frame-toolbar-button, .frame-toolbar-button-hover, .frame-toolbar-button-down
+{
+  vertical-align: top;
+}

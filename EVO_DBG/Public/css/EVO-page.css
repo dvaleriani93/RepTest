@@ -1,0 +1,32 @@
+:root {}
+
+
+.pwd-recovery-container {
+   background-color: white !important;
+}
+
+.pwd-recovery-container .frame-content-container {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+
+.pwd-recovery-button {
+   background-color: #5B567F !important;
+   border-radius: 10px;
+   color: white !important;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+
+}
+
+input.pwd-recovery-input {
+
+   background-color: red !important;
+   height: 40px !important;
+}
+
+.error-message {}

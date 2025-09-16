@@ -1,0 +1,15 @@
+.pb-container, .pb-progress {
+    border-radius: 8px;
+}
+.pb-container {
+    width: 100%;
+    height: 90%;
+    background-color: #445561;
+    min-height: 22px;
+}
+.pb-progress {
+    background-color: #0094ff;
+    color: #C8E6E9;
+    text-align: center;
+    height: 100%;
+}
