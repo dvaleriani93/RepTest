@@ -1,0 +1,12 @@
+{
+	"include": {
+		"before": [
+			"lib\\stepbar.css",
+			"lib\\stepbar.js"
+		],
+		"after": []
+	},
+	"exclude": [
+		"lib"
+	]
+}

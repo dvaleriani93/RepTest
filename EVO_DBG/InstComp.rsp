@@ -1,0 +1,21 @@
+# Default compilation parameters
+/nowarn:1701,1702,108,109,114,164,168,219
+/unsafe-
+/checked-
+/nostdlib-
+/errorreport:prompt
+/warn:4
+/debug+
+/optimize-
+/filealign:4096
+/target:library
+/warnaserror-
+@InstComp_dll.rsp
+/r:System.dll
+/r:System.Configuration.Install.dll
+/r:System.Data.dll
+/r:System.Management.dll
+/r:System.ServiceProcess.dll
+/r:System.Windows.Forms.dll
+/r:System.Xml.dll
+/recurse:App_Code\*.cs

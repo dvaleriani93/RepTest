@@ -1,0 +1,64 @@
+/* ---------------------------------- */
+/* CMP back office workflow           */
+/* ---------------------------------- */
+
+.bo-wf-coloption, .bo-wf-coldescription, .bo-wf-coldestination {
+	height: 100%;
+	width: 100%;
+}
+
+.bo-wf-coldescription-idp {
+	font-size: 14px; 
+	color: #696c70;
+	padding-right: 5px;
+}
+
+.bo-wf-coldescription-tp {
+	font-size: 16px !important;
+
+    color: var(--WF-color-value-list) !important;
+/*	color: #553e7a !important; */
+	padding-right: 5px !important;
+}
+
+.bo-wf-coldescription-step {
+	font-size: 14px;
+ /* color: #494f9e; */
+    color: var(--menu-left-color) !important;
+	padding-right: 5px;
+}
+
+.bo-wf-coldescription-ts {
+	font-size: 16px;
+ /* color: #1822a8; */
+    color: var(--WF-color-value-list) !important;
+	padding-right: 5px;
+}
+
+.bo-wf-coloption-ico {
+	display: flex;
+}
+
+.bo-wf-coldestination-ini {
+	float: left !important;
+	background-color: #0D59F1FF !important;
+	color: #FFFFFF !important;
+	padding: 1px 2px !important;
+	margin-right: 2px !important;
+	text-align: center !important;
+	cursor: help !important;
+	min-width: 24px !important;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4;
+	border-radius: 4px;
+	margin-bottom: 1px !important;
+}
+
+.bo-wf-titolo-operatore {
+	font-size: 18px !important;
+	color: var(--menu-left-color) !important;
+}
+
+/* ---------------------------------- */
+/* END CMP back office workflow       */
+/* ---------------------------------- */

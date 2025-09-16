@@ -1,0 +1,10 @@
+{
+	"include": {
+		"before": [],
+		"after": []
+	},
+	"exclude": [
+		"CkEditor",
+		"Spectrum"
+	]
+}

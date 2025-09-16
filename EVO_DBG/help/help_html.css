@@ -1,0 +1,140 @@
+body
+{
+	background-color: white;
+	margin: 4px;
+	font-family: Tahoma;
+	color: #333333;
+}
+
+p
+{
+	font-size: 10pt;
+}
+
+a:link 
+{
+	color: navy;
+	text-decoration: none;
+}
+
+a:active 
+{
+	color: navy;
+	text-decoration: none;
+}
+
+a:visited 
+{
+	color: navy;
+	text-decoration: none;
+}
+
+a:hover 
+{
+	color: white;
+	background-color: navy;
+}
+
+.PageName
+{
+	font-size: 14pt;
+	color: navy;
+	border-bottom: 1px solid silver;
+}
+
+.PageDescription
+{
+	margin-top: 16px;
+	margin-bottom: 16px;
+	margin-right: 8px;
+	margin-left: 4px;
+}
+
+.StdLink 
+{
+	text-align:right;
+	font-size: 8pt;
+	color: navy;
+	font-weight: bold;
+	border-bottom: 1px solid Silver;
+}
+
+.SummaryTable
+{
+	width: 100%;
+	margin-bottom: 16px;
+}
+
+.SummaryTitle
+{
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.SummaryList
+{
+	font-size: 10pt;
+}
+
+.DetailTable
+{
+	width: 100%;
+	border: 1 solid silver;
+	padding: 2;
+}
+
+.DetailHeaderIcon 
+{
+	padding: 2;
+  border-bottom: 2 solid white;
+}
+
+.DetailHeaderName
+{
+	width: 30%;
+	font-size: 10pt;
+	font-weight: bold;
+	color: navy;
+	background-color: #F0F0F0;
+	padding: 2;
+	border-bottom: 2 solid white;
+}
+
+.DetailHeaderDescription 
+{
+	font-size: 10pt;
+	width: 70%;
+	background-color: #F0F0F0;
+	padding: 2;
+	border-bottom: 2 solid white;
+}
+
+.DetailListIcon
+{
+	padding: 4;
+	padding-right: 4;
+}
+
+.DetailListName
+{
+	width: 30%;
+	font-size: 8pt;
+	font-weight: bold;
+	padding: 4;
+	background-color: #FFFFE0;
+}
+
+.DetailListDescription 
+{
+	font-size: 8pt;
+	width: 70%;
+	padding: 4;
+}
+
+.TopLink 
+{
+	font-size: 8pt;
+	padding: 0;
+	text-align: right;
+}
+

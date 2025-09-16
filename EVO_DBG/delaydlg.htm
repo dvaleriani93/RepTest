@@ -1,0 +1,275 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
+<style type="text/css">
+BODY
+{
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 12pt;	
+	background-color: white;
+	margin: 0;
+	border:1px solid #0E4D79;
+	color: #0E4D79;
+	overflow: hidden;
+}
+</style>
+<script type="text/javascript" language="javascript">
+
+var present = -1;
+var total = -1;
+var canAbort = 0;
+var message = "";
+var RefreshID = 0;
+var xmlDoc;
+var req;
+var filename = "";
+var PBVisible = false;
+
+// ***********************************
+// Imposta il contenuto della videata
+// ***********************************
+function Init(msg)
+{
+  if (msg && msg.length>0)
+    message = msg;
+  else
+    message = "Attendere il completamento dell'operazione...<br><br>Non chiudere il browser!";
+  //
+  Render(false);
+  filename = this.frameElement.getAttribute("progrbar");
+  RefreshID = window.setTimeout("RefreshProgressBar()",500);
+}
+
+// **********************************
+// Aggiorno i dati della ProgressBar
+// **********************************
+function RefreshProgressBar()
+{
+  CreateXMLDoc();
+	req.onreadystatechange = ProcessReqChange;
+	if (req.overrideMimeType)
+	  req.overrideMimeType('text/xml');
+	req.open("GET", "temp/" + filename + "?NOCACHE=" + Math.random(), true);
+	req.send("");
+}
+
+// ******************************************************************
+// Funzione chiamata quando cambia lo stato del caricamento dell'XML
+// ******************************************************************
+function ProcessReqChange()
+{
+  // only if req shows "loaded"
+  if (req.readyState == 4)
+  {
+    // only if "OK"
+    if (req.status == 200)
+    {
+      // IE PATCH
+      if (req.responseXML.childNodes.length==0 && document.all)
+      {
+        // IE non carica bene il documento XML se il server
+        // non invia ContentType=text/xml... e a volte non succede!!!
+        var xml = req.responseText;
+        if (xml.indexOf("\n")!=-1)
+          xml = xml.substring(xml.indexOf("\n")+1);
+        req.responseXML.loadXML(xml);
+      }
+      //
+      xmlDoc = req.responseXML;
+      ParseXML();
+      Render(true);
+      RefreshID = window.setTimeout("RefreshProgressBar()",2000);
+    }
+    else
+    {
+			// Non ho ricevuto il file, ci riprovo più tardi
+      RefreshID = window.setTimeout("RefreshProgressBar()",500);
+    }
+  }
+}
+
+// *******************************
+// Leggo le informazioni dall'XML
+// *******************************
+function ParseXML()
+{
+  var xmlNode = null;
+	if (xmlDoc.childNodes.length > 0)
+	{
+  	xmlNode = xmlDoc.childNodes[xmlDoc.childNodes.length-1];
+	  for (var i=0; i<xmlNode.childNodes.length; i++)
+	  {
+	    var k = xmlNode.childNodes[i];
+	    switch (k.nodeName)
+	    {
+	      case "PRESENT":  present = k.firstChild.nodeValue; break;
+	      case "TOTAL":    total = k.firstChild.nodeValue; break;
+	      case "CANABORT": canAbort = (k.firstChild.nodeValue == "-1" ? true : false); break;
+	      case "MESSAGE":  message = (k.firstChild == null ? "" : k.firstChild.nodeValue); break;
+	    }
+	  }
+	}
+}
+
+// *******************************
+// Render della ProgressBar
+// *******************************
+function Render(PBVisible)
+{
+  var msgObj = document.getElementById("msg");
+  var progstat = document.getElementById("progstat");
+  var contperc = document.getElementById("contperc");
+  var perc = document.getElementById("perc");
+  var bot = document.getElementById("bot");
+  //
+  // Cambio il messaggio
+  msgObj.innerHTML = message;
+  SetStatusMessage(msgObj.innerText);
+  //
+  if (!PBVisible)
+  {
+    // Mostro l'immaginetta statica
+    msgObj.style.fontSize = "";
+    progstat.style.display = "block";
+    //
+    // Nascondo la ProgressBar dinamica e il bottone
+    contperc.style.display = "none";
+    perc.style.display = "none";
+    contperc.style.position = "absolute";
+    perc.style.position = "absolute";
+    bot.style.display = "none";
+  }
+  else
+  {
+    // Nascondo l'immaginetta statica
+    progstat.style.display = "none";
+	  //
+    // Mostro la ProgressBar dinamica e il bottone
+    contperc.style.display = "block";
+    perc.style.display = "block";
+    contperc.style.position = "relative";
+    perc.style.position = "relative";
+    bot.style.display = (canAbort ? "block" : "none");
+    bot.disabled = !canAbort;
+    //
+    // Sovrappongo le due immagini che simulano la progressbar
+    contperc.style.top = "-20px";
+    //
+    // Sposto l'immagine di avanzamento
+    perc.style.left = - perc.clientWidth + parseInt(present * contperc.clientWidth / total) + "px";
+  }
+}
+
+// *************************************************
+// Imposta il testo della StatusMessage del browser
+// *************************************************
+function SetStatusMessage(txt)
+{
+  try
+  {
+  	this.frameElement.ownerDocument.parentWindow.defaultStatus = txt;
+  }
+  catch (e){}
+}
+
+// *********************
+// Ferma la ProgressBar
+// *********************
+function StopProgrBar()
+{
+  window.clearTimeout(RefreshID);
+}
+
+// *******************************
+// Creazione contenitore dell'XML
+// *******************************
+function CreateXMLDoc()
+{
+	req = false;
+	//
+  // branch for native XMLHttpRequest object
+  if(window.XMLHttpRequest && !(window.ActiveXObject))
+  {
+  	try
+  	{
+			req = new XMLHttpRequest();
+    }
+    catch(e)
+    {
+			req = false;
+    }
+  }
+  else if(window.ActiveXObject)  // branch for IE/Windows ActiveX version
+  {
+   	try
+   	{
+    	req = new ActiveXObject("Msxml2.XMLHTTP");
+   	}
+   	catch(e)
+   	{
+     	try
+     	{
+     		req = new ActiveXObject("Microsoft.XMLHTTP");
+     	}
+     	catch(e)
+     	{
+     		req = false;
+      }
+		}
+  }
+}
+
+// *******************************
+// Annulla l'operazione in corso
+// *******************************
+function Abort(bot)
+{
+  if (confirm("Sei sicuro di voler annullare l''operazione?"))
+  {
+    bot.disabled = true;
+    CreateXMLDoc();
+    //
+    // Calcolo l'URL a seconda della tecnologia usata dall'applicazione
+    var flCSharp = ("EVO.aspx".indexOf(".aspx")>0);
+    if (flCSharp)
+  	  req.open("GET", "D_EVO.aspx?FN=" + filename.substring(0, filename.length-4) + "&NOCACHE=" + Math.random(), true);
+  	else
+  	  req.open("GET", "EVO.htm?FN=" + filename.substring(0, filename.length-4) + "&NOCACHE=" + Math.random(), true);
+	  req.send("");
+    StopProgrBar();
+  }
+}
+
+</script>
+</head>
+<body>
+<table height="100%" width="100%" cellpadding="0" cellspacing="0">
+<tr>
+  <td rowspan="2" style="width: 20px; background-image:url(images\dlgbgl.gif); background-repeat: y-repeat;">
+    <br/>
+  </td>
+  <td style="text-align: right; padding-right: 10px; background-color:#dee7f6; border-bottom: 1px solid #aac6ec;">
+    <img src="images/upload.gif" valign="top" alt=""/>
+  </td>
+</tr>
+<tr>
+  <td style="text-align: center; font-weight: bold;">
+    <span id="msg">
+    </span>
+    <br/><br/>
+    <center>
+      <div style="overflow:hidden; width:200px; height:20px">
+        <img id="progstat" src="images/prgbar.gif" valign="bottom" alt=""/>
+        <img id="perc" src="images/prgbar2.gif" valign="bottom" alt=""/>
+        <img id="contperc" src="images/prgbar1.gif" valign="bottom" alt=""/>
+      </div>
+      <br/>
+      <input type="button" id="bot" value ="Annulla" onclick="javascript:Abort(this)"/>
+      <br/>
+    </center>
+  </td>
+</tr>
+</table>
+</body>
+</html>

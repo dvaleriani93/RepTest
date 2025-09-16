@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Validating HTML</title>
+<link rel=stylesheet type="text/css" href="iw.css">
+<script type="text/javascript">
+function done() 
+{
+  theform.submit();
+  setTimeout('n()', 400);
+}
+function n() 
+{
+  prog.innerText += '.';
+  setTimeout('n()', 400);
+}
+</script>
+</head>
+<body onload="done()" style="background-color:white">
+<center>
+<table style="margin-top:30px;border-top: 2 dotted #000080;border-bottom: 2 dotted #000080" cellpadding="5" cellspacing="5">
+<tr><td><img src="dttimg/idi.gif"></td><td style="font-size:26pt;font-weight:bold;color:gray">Validating HTML</td></tr>
+<tr><td>&nbsp;</td><td id=prog style="font-size:26pt;font-weight:bold;color:gray"></td></tr></table></center>
+<form id="theform" method="post" enctype="multipart/form-data" action="http://validator.w3.org/check">
+<input id="ss" name="ss" type=hidden value="1"/>
+<textarea style="display:none" cols="10" rows="10" name="fragment" id="fragment">

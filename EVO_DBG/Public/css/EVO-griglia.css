@@ -1,0 +1,499 @@
+﻿/*TUTTO QUELLO CHE RIGUARDA I CSS DELLA GRIGLIA NORMALE E LIGHT*/
+
+
+/*
+█▀▀ █▀█ █ █▀▀ █░░ █ ▄▀█   █░░ █ █▀▀ █░█ ▀█▀
+█▄█ █▀▄ █ █▄█ █▄▄ █ █▀█   █▄▄ █ █▄█ █▀█ ░█░*/
+
+
+/*CAPTION*/
+
+/*classe per nascondere i 3 puntini dalle caption della griglia*/
+.panel-filter-image.filter_more {
+    width: 1px !important;
+    height: 1px !important;
+    top:0px !important;
+}
+
+.EVO-griglia-light .panel-field-caption-list {
+    font-family: "OpenSans-Bold" !important;
+    font-weight: normal !important;
+    font-size: 10pt !important;
+    background-color: var(--EVO-background-color-caption-list-light) !important;
+    text-align: center !important;
+    color: var(--EVO-color-caption-list-light) !important;
+    border-bottom: 1px solid var(--EVO-border-bottom-caption-list-light) !important;
+    border-radius: 0px !important;
+    height: 27px !important;
+    border-right: 0px !important;
+    border-left: 0px !important;
+}
+
+
+/*VALORE*/
+
+.EVO-griglia-light .panel-field-value-list {
+    font-family: "OpenSans-Regular" !important;
+    font-size: 10pt !important;
+}
+
+
+/*
+█▀▀ █ █▄░█ █▀▀   █▀▀ █▀█ █ █▀▀ █░░ █ ▄▀█   █░░ █ █▀▀ █░█ ▀█▀
+█▀░ █ █░▀█ ██▄   █▄█ █▀▄ █ █▄█ █▄▄ █ █▀█   █▄▄ █ █▄█ █▀█ ░█░*/
+
+
+/*
+█▀▀ █▀█ █ █▀▀ █░░ █ ▄▀█   █▄░█ █▀█ █▀█ █▀▄▀█ ▄▀█ █░░ █▀▀
+█▄█ █▀▄ █ █▄█ █▄▄ █ █▀█   █░▀█ █▄█ █▀▄ █░▀░█ █▀█ █▄▄ ██▄*/
+
+
+
+
+/*Sia Bloccati che Sbloccati --> VALORE*/
+
+.panel-field-value-list {
+    opacity: 1 !important;
+    border-style: solid !important;
+    background-color: var(--EVO-background-color-value-list);
+    font-family: "OpenSans-SemiBold" !important;
+    font-size: 9pt !important;
+}
+
+/*Sia Bloccati che Sbloccati --> VALORE ma per quei campi che sono veri campi (tipo le icone non useranno questa classe)*/
+.panel-value-input.panel-field-value-list {
+        text-indent: 5px !important;
+}
+
+/*Sbloccati (se si usa campo.enable)--> VALORE*/
+
+.panel-value-input.panel-field-value-list {
+    /*color: var(--EVO-color-value-list-sbloccato) !important;*/ /*Remmati perche sovrastano anche la funzione rgbcolor di inde*/
+}
+
+
+/*Bloccati (se si usa campo.enable) --> VALORE*/
+
+.panel-value-html.panel-field-value-list {
+    /*color: var(--EVO-color-value-list-bloccato) !important;*/
+}
+
+
+/*Sia Bloccati che Sbloccati --> CAPTION*/
+
+.panel-field-caption-list {
+    background-color: var(--EVO-background-color-caption-list) !important;
+    opacity: 1 !important;
+    text-align: center !important;
+    color: var(--EVO-color-caption-list) !important;
+    font-family: "OpenSans-Bold" !important;
+    font-size: 11pt !important;
+    height: 43px !important;
+    border-radius: 3px !important;
+	border-left: 1px solid var(--EVO-border-panel-field-caption-list) !important;
+    border-right: 1px solid var(--EVO-border-panel-field-caption-list) !important;
+}
+
+
+/*Sbloccato se si usa pan.locked --> VALORE */
+
+.panel-field-value-list.panel-value-html.EVO-sbloccato {}
+
+.panel-field-value-list.panel-value-html {
+    line-height: 23px;
+}
+
+/*Bloccato se si usa pan.locked --> VALORE */
+
+.panel-field-value-list.panel-value-html.EVO-bloccato {}
+
+.panel-field-grouped-list-box .group-label {
+    background-image: linear-gradient(to right, #1C3378, #1C3378) !important;
+    font-size: 9pt !important;
+    font-family: 'OpenSans-SemiBold' !important;
+    border-radius: 9px !important;
+    text-overflow: ellipsis !important;
+    color: #e9e9e9 !important;
+}
+
+  .panel-field-grouped-list-box .group-label:hover {
+    background-color: #0c1b47 !important;
+  }
+  .panel-field-grouped-list-box .group-label:active {
+    background-color: #14275f !important;
+  }
+
+  .panel-field-grouped-list-box .group-container {
+    background-color: #1c3378  !important;
+    font-size: 11pt !important;
+    line-height: 23px !important;
+    width: 1000% !important;/*workaround*/
+  }
+  
+
+  .panel-field-list-box .group-container {
+    background-color: #1c3378  !important;
+    font-size: 11pt !important;
+    text-align: center !important;
+    font-family: "OpenSans-SemiBold" !important;
+    line-height: 23px !important;
+  }
+
+    .panel-row-selector{
+    padding: 0px !important;
+    transform: translateY(-2.2px) !important;
+    }
+    
+    .panel-scroll-area{
+		border-right: 0px dotted #C0C0C0 !important;
+		scrollbar-width: thin !important;
+    }
+
+    /*Popup seleziona checkbox*/
+    .popup-menu-container {
+        width: 200px !important;
+        border-radius: 5px !important;
+        box-shadow: 5px 5px 5px rgb(0 0 0 / 40%) !important;
+    }
+
+    .popup-menu-hover {
+        background-color: #e0e6f8 !important;
+    }
+
+    .popup-cell-text {
+        cursor: inherit !important;
+        height: 21px !important;
+    }
+
+    .popup-cell-icon{
+        border-right: 1px solid #00000042 !important;
+        cursor: inherit !important;
+    }
+
+    .popup-menu-text {
+        cursor: inherit !important;
+        font-family: "OpenSans-Semibold" !important;
+        font-size: 13px !important;
+    }
+
+    .popup-menu-item {
+        cursor: inherit !important;
+    }
+    .popup-menu-hover .popup-menu-text {
+    color: #000000 !important;
+    }
+    /*Fine Popup seleziona checkbox*/
+
+/*
+█▀▀ █░█ █▀█ █▀█ █   █▀▀ █░█ █▀ ▀█▀ █▀█ █▀▄▀█
+█▀░ █▄█ █▄█ █▀▄ █   █▄▄ █▄█ ▄█ ░█░ █▄█ █░▀░█*/
+
+.EVO-font-griglia {
+    line-height: 45px !important;
+    font-family: 'OpenSans-SemiBold' !important;
+}
+
+.EVO-font-griglia input {
+    top: 12px !important;
+}
+
+.EVO-griglia {
+    background-color: var(--EVO-background-color-evo-griglia) !important;
+    border-radius: 0px 0px 8px 8px !important;
+    width: 96% !important;
+	height: 97% !important;
+    left: 2.4% !important;
+	z-index: 1 !important;
+}
+
+.EVO-SUB {
+	height: 99% !Important;
+	bottom: 15px !important;
+	
+}
+/*
+.panel-field-caption-list, .EVO-SUB {
+    padding-top: 8px !important;
+}
+*/
+.EVO-SUB .EVO-griglia-light .panel-field-caption-list {
+    padding-top: 2px !important;
+}
+.EVO-modal .EVO-griglia {
+    background-color: var(--EVO-background-color-evo-griglia) !important;
+    border-radius: 0px 0px 8px 8px !important;
+    width: 98% !important;
+    height: 96% !important;
+    left: 0.8% !important;
+    z-index: 1 !important;
+}
+
+.EVO-modal .EVO-SUB {
+	height: 99% !Important;
+	bottom: 15px !important;
+
+}
+
+.EVO-toolbar-griglia {
+    background-color: var(--EVO-background-color-evo-toolbar-griglia) !important;
+    width: 96% !important;
+    border-radius: 8px 8px 0px 0px !important;
+    left: 2.4% !important;
+}
+
+.EVO-modal .EVO-toolbar-griglia {
+    background-color: var(--EVO-background-color-evo-toolbar-griglia) !important;
+    width: 98% !important;
+    border-radius: 8px 8px 0px 0px !important;
+    left: 0.8% !important;
+}
+
+
+.EVO-toolbar-griglia-sfondo
+{
+    left: 2.4% !important;
+}
+
+.EVO-modal .EVO-toolbar-griglia-sfondo
+{
+    left: 0.8% !important;
+}
+
+
+
+.EVO-list-icon {
+    line-height: 26px !important;
+}
+
+.EVO-list-icon-can-press:active {
+    background-color: var(--EVO-background-color-evo-list-icon-can-press-active) !important;
+}
+
+.EVO-griglia-bottom{
+    background-color: var(--EVO-background-color-evo-griglia) !important;
+    width: 96% !important;
+    left: 2.4% !important;
+    bottom: 35px !important;
+	z-index: 100 !important;
+    border-radius: 0px 0px 8px 8px !important;
+}
+
+.EVO-modal .EVO-griglia-bottom{
+    background-color: var(--EVO-background-color-evo-griglia) !important;
+    width: 98% !important;
+    left: 0.8% !important;
+    bottom: 35px !important;
+    border-radius: 0px 0px 8px 8px !important;
+}
+
+.EVO-righe-totali {
+    font-family: 'OpenSans-SemiBold' !important;
+    font-size: 18px !important;
+}
+
+.EVO-righe-totali-contatore{
+    color: var(--EVO-color-evo-righe-totali-contatore) !important;
+}
+
+.EVO-modal .form-frames-container{
+    padding-top: 0px !important;
+	top: 50px !important;
+}
+
+.panel-field-list-box{
+  overflow: visible !important;
+}
+
+.panel-field-value-list.panel-outer-row-sel {
+    border-left: 1px solid var(--EVO-border-panel-field-value-list-panel-outer-row-sel) !important;
+    border-right: 1px solid var(--EVO-border-panel-field-value-list-panel-outer-row-sel) !important;
+    border-bottom: 1px solid var(--EVO-border-panel-field-value-list-panel-outer-row-sel) !important;
+}
+
+/*FILTRI GRIGLIA*/
+
+.filter-card {
+    border: solid 1px var(--EVO-border-filter-card) !important;
+    box-shadow: 0 2px 2px 0 var(--EVO-box-shadow-filter-card);
+}
+
+.filter-sort-row {
+    background-color: var(--EVO-background-color-filter-sort-row);
+    border: solid 1px var(--EVO-border-filter-sort-row);
+	color: var(--EVO-color-filter-sort-row) !important;
+}
+
+.filter-sort-area-caption {
+    background-color: var(--EVO-background-color-filter-sort-area-caption);
+    color: var(--EVO-color-filter-sort-area-caption);
+}
+
+.filter-row-filter:hover {
+    background-color: var(--EVO-background-color-filter-row-filter-hover) !important;
+}
+
+.filter-row-filter select {
+    background: var(--EVO-background-filter-row-filter-select);
+    color: var(--EVO-color-filter-row-filter-select);
+    border-bottom: 1px solid var(--EVO-border-bottom-filter-row-filter-select) !important;
+}
+
+.filter-row-filter input {
+    background-color: var(--EVO-background-color-filter-row-filter-input);
+    border-bottom: 1px solid var(--EVO-border-bottom-filter-row-filter-input);
+    color: var(--EVO-color-filter-row-filter-input);
+}
+
+.filter-sort-row:hover, .filter-header img:hover {
+    background-color: var(--EVO-background-color-filter-sort-row-hover-filter-header-img-hover) !important;
+}
+
+.filter-header {
+    border-bottom: 1px solid var(--EVO-border-bottom-filter-header) !important;
+}
+
+.filter-header img {
+    background-color: var(--EVO-background-color-filter-header-img) !important;
+}
+
+.filter-row-or.visible {
+    background-color: var(--EVO-background-color-filter-row-or-visibile);
+    border: 1px solid var(--EVO-border-filter-row-or-visibile) !important;
+    color: var(--EVO-color-filter-row-or-visibile) !important;
+}
+
+.filter-sort-row[active] {
+    background-color: var(--EVO-background-color-filter-sort-row-active) !important;
+}
+
+.filter-popup-area {
+    border-top: 1px solid var(--EVO-border-top-filter-popup-area) !important;
+}
+
+.filter-common-controls .filter-row-filter {
+	color: var(--EVO-color-filter-common-controls-filter-row-filter) !important;
+}
+
+.filter-row-filter.row-line:hover, .filter-popup-area tr.combo-option:hover {
+	background-color: var(--EVO-background-color-filter-row-filter-row-line-hover-filter-popup-area-tr-combo-option-hover) !important;
+}
+
+.combo-option-selected{
+	background-color: var(--EVO-background-color-combo-option-selected) !important;
+}
+
+.EVO-contatore {
+    text-align: center !important;
+    background: #4552ac !important;
+    color: #FFFFFF !important;
+    padding-top: 10px !important;
+    line-height: 200%;
+	border-radius: 8px !important;
+}
+
+.EVO-testo-contatore-bottom {
+    font-family: 'OpenSans-SemiBold' !important;
+    font-size: 18px !important;
+}
+
+.EVO-contatore-bottom {
+    font-family: 'OpenSans-SemiBold' !important;
+    font-size: 18px !important;
+    color: var(--EVO-color-contatore-bottom) !important;
+}
+
+.panel-field-list-box .combo-activator {
+    border: 0px !important;
+    margin-left: -3px !important;
+    border-radius: 0px !important;
+    margin-top: 0px !important;
+    border-bottom: 1px solid var(--EVO-border-bottom-panel-field-list-box-combo-activator) !important;
+    padding-top: 1px !important;
+}
+
+.panel-field-list-box .panel-value-activator {
+    border: 0px !important;
+    margin-left: 2px !important;
+    border-radius: 0px !important;
+    margin-top: 0px !important;
+    border-bottom: 1px solid var(--EVO-border-bottom-panel-field-list-box-combo-activator) !important;
+    padding-top: 1px !important;
+    padding-left: 3px !important;
+}
+
+.EVO-html-row {
+	line-height:2;
+}
+
+.EVO-ellipsis, .list-fluid-row > .list-fluid-subrow > .panel-field-value-list, EVO-ellipsis .list-fluid-header > .list-fluid-subheader > .panel-field-caption-list{
+	text-overflow: ellipsis !important;
+	white-space: nowrap !important;
+}
+
+/*IN SOSTITUZIONE DELLA CLASSE: 
+".frame-content-container, .EVO-overflow-y-hidden{
+  overflow-y: hidden !important;
+}
+" nel file custom.css dove è stato remmato perchè impediva la generazione delle scroll bar verticali
+Vedi anche Evo-scrollbar.css(righe 40->46) e custom.css(righa 1031)
+*/
+
+.EVO-griglia .panel-list-list-container
+{
+  /*width: 97.5% !Important;*/
+  /*overflow: overlay !important;*/
+  /*padding-top: 10px !important;*/
+  /*Nuove regole*/
+  width: calc(100% - 40px) !Important;
+  overflow-x: overlay;
+  overflow-y: hidden;
+  padding-top: 8px;
+}
+/*Nuove classi*/
+.EVO-SUB .frame-content-container .panel-list-list-container
+{
+  overflow: auto !important;
+}
+.panel-list-container
+{
+  height:100% !important;
+}
+/*FINE SOSTITUZIONE*/
+
+
+
+
+
+
+.EVO-griglia-light .panel-list-list-container
+{
+  overflow: hidden !important;
+}
+
+.panel-list-container {
+width: 100% !important;
+}
+
+.EVO-foto-profilo-griglia {
+    width: 100%; /* la larghezza del div sarà uguale alla larghezza del contenitore padre */
+    height: 100%; /* l'altezza del div si adatterà automaticamente all'altezza dell'immagine */
+    }
+    
+.EVO-foto-profilo-griglia img {
+    width: 100%; /* l'immagine occuperà l'intera larghezza del div */
+    height: 100%; /* l'altezza dell'immagine si adatterà automaticamente alla larghezza del div */
+    display: block; /* per evitare spazi vuoti sotto l'immagine */
+    object-fit: cover;
+    cursor: help;
+    }
+
+/*
+█▀▀ █ █▄░█ █▀▀   █▀▀ █░█ █▀█ █▀█ █   █▀▀ █░█ █▀ ▀█▀ █▀█ █▀▄▀█
+█▀░ █ █░▀█ ██▄   █▀░ █▄█ █▄█ █▀▄ █   █▄▄ █▄█ ▄█ ░█░ █▄█ █░▀░█*/
+
+
+/*
+█▀▀ █ █▄░█ █▀▀   █▀▀ █▀█ █ █▀▀ █░░ █ ▄▀█   █▄░█ █▀█ █▀█ █▀▄▀█ ▄▀█ █░░ █▀▀
+█▀░ █ █░▀█ ██▄   █▄█ █▀▄ █ █▄█ █▄▄ █ █▀█   █░▀█ █▄█ █▀▄ █░▀░█ █▀█ █▄▄ ██▄*/
+
+

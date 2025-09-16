@@ -1,0 +1,179 @@
+.container_menu {
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.ml_left_menu {
+    background: var(--EVO-background-ml_left_menu) !important;
+}
+
+.ml_title {
+    color: var(--EVO-color-ml_title) !important;
+    font-size: 16px !important;
+}
+
+.rotate0 {
+    transform: rotate(0deg);
+}
+
+.rotate90 {
+    transform: rotate(90deg);
+}
+
+
+/*VERTICAL MENU*/
+
+.ml_menu {
+    display: block;
+}
+
+.ml_clear {
+    clear: both;
+}
+
+.ml_icona {
+    margin-right: 5px;
+}
+
+.ml_icona,
+.ml_nomemenu {
+    line-height: 25px;
+    color: var(--EVO-color-ml_icona-ml_nomemenu);
+}
+
+.ml_icona,
+.ml_expand {
+    width: 30px;
+    min-width: 30px;
+}
+
+.ml_nomemenu {
+    margin-left: 0px;
+    width: 120px;
+    min-width: 120px;
+}
+
+
+/*VERTICAL MENU*/
+
+nav.vertical {
+    position: fixed;
+    left: -45px;
+    width: 20px;
+}
+
+/* A WITH STAR */
+
+.aStar {
+    display: inline-block !important;
+    /*width: 80% !important;
+    margin-left: 5px !important;*/
+}
+
+/*NO STAR*/
+
+.no_dropdown .no_star{
+    display: none !important;
+}
+
+/* ALL UL */
+
+nav.vertical ul {
+    list-style: none;
+}
+
+
+/* ALL LI */
+
+nav.vertical li {
+    position: relative;
+}
+
+nav.vertical li a~span {
+    float: left;
+}
+
+
+/*rendo invisibile il titolo del menù esteso*/
+
+nav.vertical span.ml_nomemenu {
+    display: none;
+}
+
+nav.vertical li {
+    width: 16px;
+}
+
+
+/*rendo invisibili le icone di collasso/espansione del menù esteso*/
+
+nav.vertical li .toggler {
+    display: none;
+}
+
+
+/* ALL A */
+
+nav.vertical a {
+    display: flex;
+    color: var(--EVO-color-nav-vertical-a);
+    text-decoration: none;
+    padding: 10px 15px;
+    background: var(--EVO-background-nav-vertical-a);
+    transition: 0.2s;
+    width: 13px;
+}
+
+
+/* ALL A HOVER */
+
+nav.vertical li:hover>a span.ml_nomemenu {
+    width: 200px;
+    background: var(--EVO-background-nav-vertical-li-hover-a-span-ml-nomemenu);
+    padding: 0px 4px;
+}
+
+
+/*rendo di nuovo visibili le icone di collasso/espansione del menù esteso al passaggio*/
+
+nav.vertical ul li:hover>a span.ml_nomemenu {
+    display: block;
+}
+
+nav.vertical li:hover a {
+    width: 200px;
+}
+
+
+/* INNER UL HIDE */
+
+nav.vertical ul ul {
+    position: absolute;
+    left: 0%;
+    top: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.2s;
+    transform: translateX(200px);
+}
+
+
+/* INNER UL SHOW */
+
+nav.vertical li:hover>ul {
+    left: 190px;
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0px);
+    width: 200px;
+}
+
+nav.vertical ul li:hover ul li>a span.ml_nomemenu {
+    display: block;
+}
+
+nav.vertical ul li>ul.submenu {
+    display: block !important;
+    white-space: nowrap;
+}

@@ -1,0 +1,53 @@
+﻿   /*
+█▀ █▀▀ █▀█ █▀█ █░░ █░░ █▄▄ ▄▀█ █▀█
+▄█ █▄▄ █▀▄ █▄█ █▄▄ █▄▄ █▄█ █▀█ █▀▄*/
+   /*Scrollbar fatta con il webkit*/
+   
+   ::-webkit-scrollbar {
+      width: 9px;
+      height: 9px;
+  }
+  
+   ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+      -webkit-border-radius: 6px;
+      border-radius: 6px;
+  }
+  
+   ::-webkit-scrollbar-thumb {
+      border-radius: 6px;
+      background: var(--EVO-webkit-scrollbar-thumb) !important;
+  }
+  /*::-webkit-scrollbar-thumb:window-inactive {
+   background: rgba(31, 51, 118, 0.507); 
+  }*/
+  
+   ::-webkit-scrollbar-thumb:active {
+      background-color: var(--EVO-webkit-scrollbar-thumb-active) !important;
+  }
+  
+  ::-webkit-scrollbar:hover{
+     background: var(--EVO-webkit-scrollbar-hover) !important;
+	 -webkit-border-radius: 6px !important;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+     background: var(--EVO-webkit-scrollbar-thumb-hover) !important;
+  }
+  .scroll-cap {
+      display: none !important;
+  }
+  
+  .panel-scroll-container {
+      border-width: 0pt 1pt 1.25pt !important;
+      width: 8px !important;
+      border-color: transparent !important;
+	  /*scrollbar-width: thin !important;	*/
+	  position: sticky;
+      /*AGGIUNTA REGOLA SOTTOSTANTE: Rif EVO-griglia.css riga 423*/	
+	  /*left: calc(100% - 20px) !important;*/
+  }
+  /*Fine Scrollbar fatta con il webkit*/
+  /*Per il momento è fatto cosi, fa a toccare tutti i modali e popup, non credo sia corretto*/
+  /*
+  █▀▀ █ █▄░█ █▀▀   █▀ █▀▀ █▀█ █▀█ █░░ █░░ █▄▄ ▄▀█ █▀█
+  █▀░ █ █░▀█ ██▄   ▄█ █▄▄ █▀▄ █▄█ █▄▄ █▄▄ █▄█ █▀█ █▀▄*/

@@ -1,0 +1,138 @@
+/*INIZIO COMPONENTE CATALOGO WEB*/ 
+
+/*CONTENITORI*/
+.EVOCatalogo-contenitore-frame{
+                overflow: auto !important;
+}
+
+.EVOCatalogo-contenitore-sezione{
+                display: flow-root !important;
+}
+
+.EVOCatalogo-contenitore-titolo-sezione{
+    font-size: 22px !important;
+    font-weight: bold !important;
+    color: black !important;
+    margin-left: 25px !important;
+    padding-left: 10px !important;
+    width: fit-content !important;
+    height: 25px !important;
+    margin-bottom: 15px;
+}
+
+.EVOCatalogo-contenitore-intestazione{
+                padding-bottom: 15px !important;
+                width: fit-content !important;
+}
+
+.EVOCatalogo-contenitore-griglia{
+                display: block !important;
+}
+
+.EVOCatalogo-contenitore-scheda-griglia{
+                height: 180px !important;
+    width: 140px !important;
+    background: transparent !important;
+    border-radius: 10px !important;
+    position: relative !important;
+    float: left !important;
+    text-align: center !important;
+                transition: 0.4s !important;
+                cursor: pointer !important;
+}
+
+.EVOCatalogo-contenitore-descrizione-scheda{
+               word-break: break-word;
+}
+
+.EVOCatalogo-contenitore-scheda-galleria-risorse{
+                height: 160px !important;
+    width: 130px !important;
+    background: transparent !important;
+    border-radius: 10px !important;
+    position: relative !important;
+    float: left !important;
+    text-align: center !important;
+                transition: 0.4s !important;
+                margin-right: 10px !important;
+    /*margin-bottom: 10px !important;*/
+}
+
+.EVOCatalogo-contenitore-scheda-griglia:hover{
+                transition: 0.4s !important;
+    transform:scale(1.05,1.05) !important;
+    color:crimson !important;
+    font-weight: bolder !important;
+}
+
+
+.EVOCatalogo-contenitore-scheda-galleria-risorse:hover{
+                transition: 0.4s !important;
+    transform:scale(1.05,1.05) !important;
+                color:black !important;
+    font-weight: bolder !important;
+}
+
+/*ICONE*/
+
+.EVOCatalogo-icona-scheda-dettaglio{
+                width: 125px !important;
+                height: 125px !important;
+                border-radius: 10px !important;
+}
+
+.EVOCatalogo-icona-scheda-galleria-risorse{
+                width: 100px !important;
+                height: 100px !important;
+                border-radius: 10px !important;
+}
+
+.EVOCatalogo-icona-scheda-griglia{
+                width: 100px !important;
+                height: 100px !important;
+                border-radius: 10px !important;
+                margin-top: 5px;
+}
+
+.EVOCatalogo-icona-intestazione{
+                width: 30px !important;
+                height: 30px !important;
+                float: left !important;
+}
+
+/*ALTRI ELEMENTI*/
+
+.EVOCatalogo-button-delete-griglia{
+    position: absolute !important;
+    top: -7px !important;
+    right: 11px !important;
+    z-index: 100 !important;
+    font-size: 22px !important;
+    color: black !important;
+}
+
+.EVOCatalogo-button-delete-dettaglio{
+                position: absolute !important;
+    top: -15px !important;
+    right: 2px !important;
+    z-index: 100 !important;
+                font-size: 25px !important;
+                color: black !important;
+}
+
+.EVOCatalogo-button-delete-griglia:hover, .button-delete-dettaglio:hover{
+                transform: scale(1.05,1.05) !important;
+                color: red !important;
+}
+
+.EVOCatalogo-contenitore-griglia-jquery{
+                display: none !important;
+}
+
+.EVOCatalogo-cleaner{
+                clear: both !important;
+}
+
+/*FINE COMPONENTE CATALOGO WEB*/ 
+
+/* ---------------------------------- */

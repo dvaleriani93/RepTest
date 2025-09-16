@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="google" value="notranslate" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style type="text/css">
+      BODY {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 10pt;
+        background-color: #F0F0F0;
+      }
+      #wait-box {
+        width: 300px;
+        margin: 160px auto;
+        background-color: #FFFFFF;
+        border-radius: 3px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #wait-box-image {
+        padding-top: 15px;
+        max-height: 100px;
+        max-width: 100px;
+        min-height: 40px;
+        min-width: 40px;
+      }
+      #wait-box-text {
+        font-size: 15pt;
+        padding: 15px;
+      }
+      #wait-box-progress {
+        background-color: #6899BB;
+        height: 4px;
+        width: 300px;
+        font-size: 0px;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="customf.css">
+  </head>
+  <body onload="javascript:##INITAPP##">
+    <!-- You can customize the appearance of the page that is loaded when 
+         waiting for javascript to be loaded -->
+    <div id="wait-box">
+      <img id="wait-box-image" src="images/inde.gif">
+      <div id="wait-box-text"></div>
+      <div id="wait-box-progress"></div>
+    </div>
+    <script type="text/javascript">
+      var WaitTimer = null;
+      var Size = 0;
+      var RD3_StartAppMsg = "##STARTAPP##";
+      var RD3_AppLanguage = "##APPLANGUAGE##";
+      var mainCaption = "EVO";
+      var waitBoxText = document.getElementById("wait-box-text");
+      waitBoxText.innerHTML = mainCaption.split("}} ").pop();
+      document.title = waitBoxText.textContent;
+      function AnimateWait()
+      {
+        WaitTimer = window.setTimeout("AnimateWait()", 15);
+        Size += 5;
+        if (Size<=300)
+        {
+          var progress = document.getElementById("wait-box-progress");
+          if (progress)
+            progress.style.width = Size + "px";
+        }
+      }
+      AnimateWait();
+    </script>
+    <!-- Scripts are loaded after defining the wait-box, which appears immediately -->
+    <script src="fluid/app.js"></script>
+    <script src="fluid/view.js"></script>
+    <script src="fluid/element.js"></script>
+    <script src="fluid/utils.js"></script>
+    <script src="fluid/widget.js"></script>
+    <script src="fluid/objects/animation/clientanimation.js"></script>
+    <script src="fluid/objects/base/container.js"></script>
+    <script src="fluid/objects/base/span.js"></script>
+    <script src="fluid/objects/base/meter.js"></script>
+    <script src="fluid/objects/base/button.js"></script>
+    <script src="fluid/objects/base/device.js"></script>
+    <script src="fluid/objects/base/shellEmulator/shellEmulator.js"></script>
+    <script src="fluid/objects/base/input.js"></script>
+    <script src="fluid/objects/base/link.js"></script>
+    <script src="fluid/objects/base/image.js"></script>
+    <script src="fluid/objects/base/iframe.js"></script>
+    <script src="fluid/objects/base/altcontainer.js"></script>
+    <script src="fluid/objects/base/splitview.js"></script>
+    <script src="fluid/objects/base/svg.js"></script>
+    <script src="fluid/objects/base/video.js"></script>
+    <script src="fluid/objects/base/dialog.js"></script>
+    <script src="fluid/objects/base/menulist.js"></script>
+    <script src="fluid/objects/base/menuitem.js"></script>
+    <script src="fluid/objects/base/autocomplete.js"></script>
+    <script src="fluid/objects/base/headerlist.js"></script>
+    <script src="fluid/objects/maskedinput/maskedinp.js"></script>
+
+    <script src="fluid/objects/fluid/idfMessagesPump.js"></script>
+    <script src="fluid/objects/fluid/idfShell.js"></script>
+    <script src="fluid/objects/fluid/bundles/resources.js"></script>
+    <script src="fluid/objects/fluid/widgets/idfControl.js"></script>
+    <script src="fluid/objects/fluid/widgets/idfCustomElement.js"></script>
+    <script src="fluid/objects/fluid/widgets/idfFrame.js"></script>
+    <script src="fluid/objects/fluid/widgets/idfMessage.js"></script>
+    <script src="fluid/objects/fluid/widgets/idfProgressDialog.js"></script>
+    <script src="fluid/objects/fluid/widgets/idfView.js"></script>
+    <script src="fluid/objects/fluid/widgets/idfVisualStyle.js"></script>
+    <script src="fluid/objects/fluid/widgets/idfWebEntryPoint.js"></script>
+    <script src="fluid/objects/fluid/widgets/book/idfBook.js"></script>
+    <script src="fluid/objects/fluid/widgets/book/idfBookPage.js"></script>
+    <script src="fluid/objects/fluid/widgets/book/idfSection.js"></script>
+    <script src="fluid/objects/fluid/widgets/book/idfBox.js"></script>
+    <script src="fluid/objects/fluid/widgets/book/idfSpan.js"></script>
+    <script src="fluid/objects/fluid/widgets/buttonbar/idfButtonBar.js"></script>
+    <script src="fluid/objects/fluid/widgets/chart/idfChart.js"></script>
+    <script src="fluid/objects/fluid/widgets/command/idfCommandList.js"></script>
+    <script src="fluid/objects/fluid/widgets/command/idfCommand.js"></script>
+    <script src="fluid/objects/fluid/widgets/indicator/idfIndicator.js"></script>
+    <script src="fluid/objects/fluid/widgets/indicator/idfIndicatorList.js"></script>
+    <script src="fluid/objects/fluid/widgets/panel/idfPanel.js"></script>
+    <script src="fluid/objects/fluid/widgets/panel/idfPage.js"></script>
+    <script src="fluid/objects/fluid/widgets/panel/idfGroup.js"></script>
+    <script src="fluid/objects/fluid/widgets/panel/idfRowsGroup.js"></script>
+    <script src="fluid/objects/fluid/widgets/panel/idfField.js"></script>
+    <script src="fluid/objects/fluid/widgets/panel/idfFieldValue.js"></script>
+    <script src="fluid/objects/fluid/widgets/panel/idfFilterPopup.js"></script>
+    <script src="fluid/objects/fluid/widgets/tabbedview/idfTabbedView.js"></script>
+    <script src="fluid/objects/fluid/widgets/tabbedview/idfTab.js"></script>
+    <script src="fluid/objects/fluid/widgets/timer/idfTimerList.js"></script>
+    <script src="fluid/objects/fluid/widgets/timer/idfTimer.js"></script>
+    <script src="fluid/objects/fluid/widgets/tree/idfTree.js"></script>
+    <script src="fluid/objects/fluid/widgets/tree/idfTreeNode.js"></script>
+
+    <script src="fluid/objects/fluid/fluid.js"></script>
+    <script src="fluid/objects/animation/shifty.min.js"></script>
+    <script src="fluid/objects/base/autosize.min.js"></script>
+    <script src="fluid/objects/hammer/Hammer.min.js"></script>
+    <script src="fluid/objects/moment/moment-with-locales.min.js"></script>
+    <script src="fluid/objects/moment/moment-timezone-with-data.min.js"></script>
+    <script src="fluid/objects/tippy/popper.min.js"></script>
+    <script src="fluid/objects/tippy/tippy.min.js"></script>
+
+    <script type="text/javascript" src="customf.js"></script>
+    <div id="app-ui" style="visibility:hidden"></div>
+  </body>
+</html>

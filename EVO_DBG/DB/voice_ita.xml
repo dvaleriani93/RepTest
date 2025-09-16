@@ -1,0 +1,248 @@
+<?xml version="1.0"?>
+<Voice>
+  <LanguageTokens>
+                  il,
+                  lo,
+                  la,
+                  i,
+                  l,
+                  gli,
+                  le,
+                  di,
+                  del,
+                  dello,
+                  della,
+                  dell,
+                  dei,
+                  degli,
+                  delle,
+                  a,
+                  ad,
+                  al,
+                  allo,
+                  alla,
+                  all,
+                  ai,
+                  agli,
+                  alle,
+                  da,
+                  dal,
+                  dallo,
+                  dalla,
+                  dall,
+                  dai,
+                  dagli,
+                  dalle,
+                  in,
+                  nel,
+                  nello,
+                  nella,
+                  nell,
+                  nei,
+                  negli,
+                  nelle,
+                  con,
+                  col,
+                  coi,
+                  sul,
+                  sullo,
+                  sulla,
+                  sull,
+                  sui,
+                  sugli,
+                  sulle,
+                  un,
+                  uno,
+                  una,
+                  e,
+                  tra,
+                  fra
+  </LanguageTokens>
+  <Punctuation>
+    <Mark type="single">
+      <Desc>a capo</Desc>
+      <Symbol>/n</Symbol>
+    </Mark>
+    <Mark type="single">
+      <Desc>punto e virgola</Desc>
+      <Symbol>;</Symbol>
+    </Mark>
+    <Mark type="single">
+      <Desc>punto esclamativo</Desc>
+      <Symbol>!</Symbol>
+    </Mark>
+    <Mark type="single">
+      <Desc>punto interrogativo</Desc>
+      <Symbol>?</Symbol>
+    </Mark>
+    <Mark type="single">
+      <Desc>punto</Desc>
+      <Symbol>.</Symbol>
+    </Mark>
+    <Mark type="single">
+      <Desc>virgola</Desc>
+      <Symbol>,</Symbol>
+    </Mark>
+    <Mark type="double">
+      <Desc>virgolette</Desc>
+      <Symbol>"</Symbol>
+    </Mark>
+    <Mark type="single">
+      <Desc>chiocciola</Desc>
+      <Symbol>@</Symbol>
+    </Mark>
+    <Mark type="single">
+      <Desc>at</Desc>
+      <Symbol>@</Symbol>
+    </Mark>
+    <Mark type="single">
+      <Desc>slash</Desc>
+      <Symbol>/</Symbol>
+    </Mark>
+    <Mark type="single">
+      <Desc>barra</Desc>
+      <Symbol>/</Symbol>
+    </Mark>
+  </Punctuation>
+  <CommandRecognizer context="navigation">
+    <Command tag="gotop" text="Ok. Vado alla prima riga.">
+      <Syn>{ VA, VAI, MOSTRA, TORNA, *};{ CIMA, INIZIO };{ LISTA, ELENCO, PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+      <Syn>{ VA, VAI, MOSTRA, TORNA, *};{ PRIMA };{ RIGA, RECORD };{ LISTA, ELENCO, PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="gobottom" text="Ok. Vado all'ultima riga.">
+      <Syn>{ VA, VAI, MOSTRA, *} ;{ FONDO, FINE };{ LISTA, ELENCO, PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+      <Syn>{ VA, VAI, MOSTRA, *};{ ULTIMA };{ RIGA, PAGINA };{ LISTA, ELENCO, PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="goup" text="Ok. Vado indietro.">
+      <Syn>{ VA, VAI, MOSTRA, TORNA, *};{ SU, INDIETRO, PRECEDENTE };{ PAGINA, *};{ PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="godown" text="Ok. Vado avanti.">
+      <Syn>{ VA, VAI, MOSTRA, *};{ giu, GIù, AVANTI, SUCCESSIVA };{ PAGINA, *};{ PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="golist" text="Ok. Ecco la lista.">
+      <Syn>{ VA, VAI, MOSTRA, APRI, TORNA, *};{ LISTA, ELENCO };{ PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="godetail" text="Ok. Ecco il dettaglio.">
+      <Syn>{ VA, VAI, MOSTRA, APRI, * };{ DETTAGLIO };{ PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="gotopage" text="Ecco la pagina |1.">
+      <Syn>{ VA, VAI, MOSTRA, *};{ PAGINA };{ PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="gotorow" text="Ecco la riga |1.">
+      <Syn>{ VA, VAI, MOSTRA, *};{ RIGA };{ PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="gotofield" text="Vado alla riga |1.">
+      <Syn>{ VA, VAI, MOSTRA, * }; { RIGA, * };{ PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="goNext" text="Ok. Vado alla prossima pagina.">
+      <Syn>{ VAI, MOSTRA,  *};{ PROSSIMA };{ PAGINA };{ BOOK, *} </Syn>
+      <Syn>{ VAI, MOSTRA,  *};{ PAGINA };{ SUCCESSIVA };{ BOOK, *} </Syn>
+      <Syn>{ VAI, *};{AVANTI}</Syn>
+    </Command>
+    <Command tag="goPrev" text="Ok. Vado alla pagina precedente.">
+      <Syn>{ VAI, MOSTRA, *};{ PAGINA };{ PRECEDENTE };{ BOOK, *}</Syn>
+      <Syn>{ VAI, * };{ INDIETRO }</Syn>
+    </Command>
+    <Command tag="goFirst" text="Ecco la prima pagina.">
+      <Syn>{ VAI, MOSTRA, * };{ PRIMA };{ PAGINA };{ BOOK, *}</Syn>
+      <Syn>{ VAI, MOSTRA, * };{ INIZIO };{ BOOK, * }</Syn>
+    </Command>
+    <Command tag="goLast" text="Ecco l'ultima pagina.">
+      <Syn>{ VAI, MOSTRA, * };{ ULTIMA };{ PAGINA };{ BOOK, *}</Syn>
+      <Syn>{ VAI, MOSTRA, * };{ FINE };{ BOOK, * }</Syn>
+    </Command>
+    <Command tag="goPage" text="Ok. Ecco la pagina |1.">
+      <Syn>{ VAI, * };{ PAGINA };{ BOOK, *}</Syn>
+    </Command>
+  </CommandRecognizer>
+  <CommandRecognizer context="action">
+    <Command tag="lock" text="Ok. Ho bloccato |1">
+      <Syn>{ BLOCCA };{ PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="unlock" text="Ok. Ho sbloccato |1">
+      <Syn>{ SBLOCCA };{ PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="duplicate" text="Ok. Ho duplicato la riga |1">
+      <Syn>{ DUPLICA, COPIA };{RIGA, *};{ PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="delete" text="Ok. Ho cancellato la riga |1">
+      <Syn>{ CANCELLA, ELIMINA };{ RIGA, * };{ PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="save" text="Ok. Ho salvato il pannello">
+      <Syn>{ SALVA, REGISTRA };{ DATI, * };{ PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="cancel" text="Ok. Modifiche annullate.">
+      <Syn>{ CANCELLA, ANNULLA, ANNULLARE };{ MODIFICHE, *};{ PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="refresh" text="Ok. Ho ricaricato i dati">
+      <Syn>{ RICARICA, AGGIORNA, REFRESH };{ PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="export" text="Esporto in Excel il pannello |1">
+      <Syn>{ ESPORTA };{ PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="print" text="Stampo il pannello |1">
+      <Syn>{ STAMPA };{ PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="cancelSelection" text="Ok. Ho annullato la selezione">
+      <Syn>{ ANNULLA, ANNULLARE };{ SELEZIONE };{ PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="selectAll" text="Ok. Ho selezionato tutte le righe">
+      <Syn>{ SELEZIONA };{ TUTTO, TUTTE };{ RIGA, RIGHE, * };{ PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="invertSelection" text="Ok. Ho invertito la selezione">
+      <Syn>{ INVERTI };{ SELEZIONE };{ PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="insert" text="Ok. Ho inserito i dati.">
+      <Syn>{ AGGIUNGI, INSERISCI };{ CAMPO, * };{NUOVA, *};{ RIGA, * };{ PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="write" text="Ok. Ho modificato la riga.">
+      <Syn>{ SCRIVI, MODIFICA, CAMBIA, CAMBIARE, CAMBIO, * };{ CAMPO, * };{ PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="duplicateRow" text="Ok. Ho duplicato la riga |1.">
+      <Syn>{ DUPLICA, COPIA };{RIGA, *};{ PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="deleteRow" text="Ok. Ho cancellato la riga.">
+      <Syn>{ CANCELLA, ELIMINA };{ RIGA, * };{ PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="select" text="Ok. Ho selezionato le righe |1.">
+      <Syn>{ SELEZIONA };{ RIGA, RIGHE, * };{ PANNELLO, TABELLA, GRIGLIA, *}</Syn>
+    </Command>
+    <Command tag="run" text="Ok.">
+      <Syn>{ APRI, ESEGUI, AVVIA, * };{ PROCEDURA, FUNZIONE, * }</Syn>
+    </Command>
+    <Command tag="find" text="Ok. Ho trovato |1 risultati">
+      <Syn>{ CERCA, TROVA, TROVO };{ TUTTI, TUTTE, *};{ PANNELLO, TABELLA, GRIGLIA, * }</Syn>
+      <Syn>{ FAMMI };{ VEDERE };{ TUTTI, TUTTE, *};{ PANNELLO, TABELLA, GRIGLIA, * }</Syn>
+      <Syn>{ TIRA };{ FUORI };{ TUTTI, TUTTE, *};{ PANNELLO, TABELLA, GRIGLIA, * }</Syn>
+    </Command>
+    <Command tag="close" text="Ok. Ho chiuso |1. ">
+      <Syn>{ CHIUDI };{ VIDEATA, PANNELLO, TABELLA, GRIGLIA, * }</Syn>
+    </Command>
+    <Command tag="closeAll" text="Ho chiuso tutte le videate.">
+      <Syn>{ CHIUDI };{ TUTTO, TUTTE };{ VIDEATE, PANNELLI, TABELLE, GRIGLIE, MAPPE, * }</Syn>
+    </Command>
+    <Command tag="open" text="Ok. Ho aperto |1.">
+      <Syn>{ APRI, VAI, * };{ VIDEATA, PANNELLO, TABELLA, GRIGLIA, * }</Syn>
+    </Command>
+    <Command tag="stop" text="">
+      <Syn>{ BASTA, PASTA }</Syn>
+    </Command>
+    <Command tag="findBook" text="Ok. Ho trovato |1 risultati">
+      <Syn>{ CERCA, TROVA, TROVO };{ TUTTI, TUTTE, *};{ REPORT, BOOK, * }</Syn>
+    </Command>
+    <Command tag="read" text="|1.;Il campo è vuoto.">
+      <Syn>{ QUAL, QUALE, QUALI }; {é, è, SONO, *}</Syn>
+      <Syn>{ LEGGI, DIMMI }</Syn>
+    </Command>
+    <Command tag="count" text="|1.">
+      <Syn>{ QUANTI }; {é, è, SONO, *}</Syn>
+    </Command>
+    <Command tag="readBook" text="|1.">
+      <Syn>{ QUAL, QUALE, QUALI }; {é, è, SONO, *}</Syn>
+      <Syn>{ LEGGI, DIMMI }</Syn>
+    </Command>
+    <Command tag="deleteField" text="Ok. Campo cancellato.">
+      <Syn>{ CANCELLA }; { CAMPO }</Syn>
+    </Command>
+  </CommandRecognizer>
+</Voice>

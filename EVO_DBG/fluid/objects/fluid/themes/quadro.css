@@ -1,0 +1,1191 @@
+/*****   COLOR PERSONALIZATION *****/
+
+:root {
+  --col-primary: rgb(0, 129, 194);
+
+  --col-back-button-1: rgb(0, 129, 194);
+  --col-back-toolbar: rgb(0, 129, 194);
+  --col-back-menu: -webkit-gradient(linear, left top, left bottom, from(#777777), color-stop(0.8, #363636), to(#363636));
+  --col-back-menu-item: #2a2a2a;
+  --col-back-menu-header: rgb(0, 129, 194);
+  --col-back-tabbed: -webkit-gradient(linear, left top, left bottom, from(#555555), color-stop(0.8, #363636), to(#363636));
+  --col-back-button-modal: gray;
+  --col-back-2: #f0f0f0;
+  --col-back-4: #8A9399;
+  --col-back-6: rgb(36, 119, 179);
+  --col-back-7: #C0C0C0;
+  --col-back-8: rgb(104, 153, 187);
+  --col-back-9: #e2e2e2;
+  --col-back-10: #fff;
+  --col-back-form-header: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.03, transparent), color-stop(0.03, #F0F0F0), color-stop(0.99, #F0F0F0), color-stop(0.99, transparent), to(transparent));
+  --col-back-welcome: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))),    -webkit-gradient(linear, left top, left bottom, from(rgb(0, 129, 194)), to(rgb(0, 129, 194)));
+
+  --col-fore-text-1: #808080;
+  --col-fore-3: #8A9399;
+  --col-fore-5: #000000;
+  --col-fore-7: rgb(36, 119, 179);
+  --col-fore-10: #ffc125;
+  --col-fore-12: #f53d3d;
+  --col-fore-button-1: #fff;
+  --col-fore-toolbar: #fff;
+  --col-fore-tree-icon: #d7d9db;
+  --col-fore-selected: rgb(57, 85, 135);
+  --col-fore-icon: rgb(0, 129, 194);
+  --col-fore-tooltip: gray;
+
+  --col-border-2: #808080;
+  --col-border-4: #8A9399;
+  --col-border-5: #C0C0C0;
+  --col-border-7: #ff0000;
+  --col-border-1: #ffffff;
+  --col-border-group: #b2b4b8;
+  --col-border-tree: #d7d9db;
+  --col-border-modal: black;
+  --col-border-alert: #3e3e43;
+  --col-border-alert-head: #ccc;
+  --col-border-modal-button: #3d3533;
+}
+
+/**************   ICON PERSONALIZATION ***********/
+
+.ion-md-undo:before
+{
+  content: "";
+}
+
+.ion-ios-undo:before
+{
+  content: "";
+}
+
+.ion-md-lock:before
+{
+  content: "";
+}
+
+.ion-ios-lock:before
+{
+  content: "";
+}
+
+a:not([button])[primary],
+b[primary],
+em[primary],
+h1[primary],
+h2[primary],
+h3[primary],
+h4[primary],
+h5[primary],
+h6[primary],
+i[primary],
+ion-icon[primary],
+p[primary],
+small[primary],
+span[primary],
+strong[primary],
+sub[primary],
+sup[primary]
+{
+  color: var(--col-fore-icon);
+}
+
+/***** GENERAL *****/
+.button.activated
+{
+  background: var(--col-back-button-1);
+}
+
+.button.generic-btn, .button.generic-btn.activated
+{
+  background-color: var(--col-back-button-1);
+  box-shadow: none;
+  font-size: 16px;
+}
+
+.button.generic-btn:hover
+{
+  opacity: 0.7;
+}
+
+.button.generic-btn ion-icon, .menu-img-obj
+{
+  color: var(--col-fore-button-1);
+}
+
+.bar-button-menutoggle,
+.back-button.show-back-button
+{
+  color: var(--col-fore-button-1);
+}
+
+.checkbox-checked
+{
+  border-color: var(--col-primary);
+  background-color: var(--col-primary);
+}
+
+.back-button-text
+{
+  display: none;
+}
+
+.refresher-pulling-icon>ion-icon
+{
+  color: var(--col-fore-button-1);
+}
+
+/***** SCROLLBAR SECTION *****/
+::-webkit-scrollbar-thumb
+{
+  border-radius: 7px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Hide the scrollbar on PC Browser (Ionic sets the class has-scrollbar in this case, we can use it to hide the scrollbars) */
+ion-nav.has-scrollbar scroll-content::-webkit-scrollbar-thumb,
+ion-nav.has-scrollbar .frame-content::-webkit-scrollbar-thumb,
+ion-nav.has-scrollbar .panel-list-grid::-webkit-scrollbar-thumb,
+has-scrollbar.has-scrollbar .main-menu-inner-page::-webkit-scrollbar-thumb
+{
+  background-color: transparent;
+}
+
+
+/***** TOOLTIP SECTION *****/
+.tippy-tooltip
+{
+  background: var(--col-back-2);
+}
+
+.tippy-tooltip[data-placement^=top]>.tippy-arrow
+{
+  border-top-color: var(--col-back-2);
+}
+
+.tippy-tooltip[data-placement^=right]>.tippy-arrow
+{
+  border-right-color: var(--col-back-2);
+}
+
+.tippy-tooltip[data-placement^=bottom]>.tippy-arrow
+{
+  border-bottom-color: var(--col-back-2);
+}
+
+.tooltip-title
+{
+  font-weight: bold;
+  color: var(--col-fore-text-1);
+  font-size: 13px;
+}
+
+.tooltip-content
+{
+  color: var(--col-fore-text-1);
+}
+
+
+/***** MAIN HEADER SECTION *****/
+.main-header
+{
+  display: none;
+}
+
+
+.bar-button-default.toolbar-cmd-btn
+{
+  border-radius: 3px;
+  text-transform: uppercase;
+  border: none;
+  background-color: var(--col-back-4);
+  color: var(--col-fore-button-1);
+  box-shadow: 0 1px 0 0 rgb(0 0 0 / 60%);
+}
+
+.frame-toolbar .bar-button-default.toolbar-cmd-btn.toolbar-cmd-btn
+{
+  background-color: var(--col-back-button-1);
+  box-shadow: none;
+  color: var(--col-fore-button-1);
+  border: 1px solid var(--col-border-1);
+}
+
+ion-navbar.view-navbar
+{
+  height: 43px;
+  min-height: 43px;
+}
+
+.view-navbar .toolbar-background
+{
+  background-color: var(--col-back-toolbar);
+}
+
+.view-navbar .toolbar-title
+{
+  color: var(--col-fore-toolbar);
+  text-shadow: rgb(0 0 0 / 75%) 0px 1px;
+}
+
+.view-header .view-navbar .back-button,
+.view-header .view-navbar .bar-button-menutoggle
+{
+  order: 10;
+}
+
+ion-header.view-header
+{
+  border-bottom: 1px solid var(--col-border-modal);
+}
+
+/***** MAIN MENU SECTION *****/
+.main-split-pane:not(.no-header),
+.main-vertical-pane:not(.no-header)
+{
+  margin-top: 0px;
+}
+
+ion-split-pane.menu-right ion-menu.split-pane-side
+{
+  order: 2;
+  right: 0px;
+  left: unset;
+}
+
+.main-menu-header,
+.welcome-navbar
+{
+  color: var(--col-fore-toolbar);
+  font-size: 11pt;
+  height: 44px;
+  min-height: 44px;
+  border-bottom: 1px solid var(--col-border-modal);
+}
+
+.welcome-container
+{
+  background: var(--col-back-welcome);
+}
+
+.main-menu-header .toolbar-background,
+.welcome-navbar .toolbar-background
+{
+  background-color: var(--col-back-toolbar);
+}
+
+.main-menu-header .toolbar-title,
+.welcome-navbar .toolbar-title
+{
+  color: var(--col-fore-toolbar);
+  text-shadow: rgb(0 0 0 / 75%) 0px 1px;
+}
+
+.main-menu-content
+{
+  background: var(--col-back-menu);
+}
+
+.item.main-menu-item
+{
+  font-size: 13pt;
+  background: var(--col-back-menu-item);
+  color: var(--col-fore-toolbar);
+  height: 44px;
+}
+
+.cmd-level-1>.main-menu-header ion-label
+{
+  flex-grow: 0;
+  flex-basis: content;
+  background: var(--col-back-menu-header);
+  padding: 0px 5px;
+  box-shadow: 2px 1px 3px rgb(0 0 0 / 40%);
+  font-size: 13pt;
+}
+
+.cmd-level-2,
+.cmd-level-3
+{
+  background: var(--col-back-menu-item);
+}
+
+.cmd-level-2>.main-menu-header:hover,
+.cmd-level-3>.main-menu-header:hover
+{
+  background: var(--col-back-menu-header);
+  cursor: pointer;
+}
+
+.main-menu-header .main-menu-expand-btn
+{
+  background-color: transparent;
+}
+
+.cmd-level-1>.main-menu-header .main-menu-expand-btn
+{
+  display: none;
+}
+
+button.main-menu-item:hover,
+button.main-menu-item.activated
+{
+  background-color: var(--col-back-6);
+  color: var(--col-fore-button-1);
+}
+
+.main-menu-footer
+{
+  color: var(--col-fore-text-1);
+  font-size: 8pt;
+}
+
+.main-menu-button
+{
+  border-right: 1px solid var(--col-border-5);
+}
+
+.main-menu-button ion-icon
+{
+  color: var(--col-fore-button-1);
+}
+
+.main-menu-list.cmd-level-2>ion-list-header
+{
+  font-size: 13pt;
+}
+
+.main-menu-list.cmd-level-2>.main-menu-items-container .main-menu-item
+{
+  font-size: 13pt;
+}
+
+.main-menu-list.cmd-level-3>ion-list-header
+{
+  font-size: 13pt;
+}
+
+.main-menu-list.cmd-level-3>.main-menu-items-container .main-menu-item
+{
+  font-size: 13pt;
+}
+
+.split-pane-visible.main-split-pane>.split-pane-side.main-menu-empty
+{
+  display: none;
+}
+
+/***** MODAL SECTION ******/
+
+.modal-modal-view
+{
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 50%);
+}
+
+/* On tablet usa a modal that is centered */
+@media only screen and (min-width : 500px) and (min-height : 900px) and (orientation: portrait),
+only screen and (min-width : 900px) and (min-height : 500px) and (orientation: landscape)
+{
+  .modal-modal-view .modal-wrapper,
+  .popup-modal-view .modal-wrapper {
+    position: absolute;
+  }
+
+  ion-modal.modal-cmp ion-backdrop {
+    visibility: visible;
+  }
+}
+
+/* on smartphone fill the view */
+@media only screen and (max-width : 499px) and (max-height : 899px) and (orientation: portrait),
+only screen and (max-width : 499px) and (max-height : 899px) and (orientation: landscape) {
+  .modal-modal-view .modal-wrapper,
+  .popup-modal-view .modal-wrapper {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+.modal-border-none
+{
+  border: none;
+}
+
+.modal-border-default, .modal-border-thin
+{
+  border: 1px solid var(--col-border-modal);
+  border-radius: 2px;
+}
+
+.modal-border-thick
+{
+  border: 2px solid var(--col-border-modal);
+  border-radius: 2px;
+}
+
+/***** VIEW SECTION *****/
+
+.center-view-container>ion-nav
+{
+  background: var(--col-back-menu);
+}
+
+.view-content
+{
+  background-color: transparent;
+}
+
+/***** MESSAGE VIEW SECTION *****/
+.item.view-message-container
+{
+  background: transparent;
+  color: var(--col-fore-toolbar);
+}
+
+.item.view-message-container.info 
+{
+  display: none;
+}
+
+.item.view-message-container .item-inner
+{
+  border: none;
+}
+
+/***** FRAME SECTION *****/
+.frame-toolbar
+{
+  background-color: var(--col-back-toolbar);
+  color: var(--col-fore-button-1);
+  height: 44px;
+  min-height: 44px;
+  font-size: 20px;
+}
+
+ion-list-header.frame-toolbar > .item-inner
+{
+  display: flex;
+}
+
+.frame-toolbar>.item-inner>.input-wrapper
+{
+  flex-grow: 1;
+}
+
+.frame-border
+{
+  box-shadow: -1px -1px 0 0 var(--col-border-4) inset, 1px 1px 0 0 var(--col-border-4) inset;
+}
+
+.frame-caption
+{
+  text-shadow: rgb(0 0 0 / 75%) 0px 1px;
+}
+
+/***** PANEL TOOLBAR SECTION (MOBILE LOGIC) *****/
+
+.button-fab.insert-btn, .button-fab.frame-lock-btn
+{
+  z-index: 9999;
+  width: 56px !important;
+  height: 56px;
+}
+
+/* Set the buttons order */
+.frame-container>.frame-toolbar .frame-toolbar-btn.frame-menu-btn
+{
+  order: 0;
+}
+
+.frame-container>.frame-toolbar .item-inner
+{
+  order: 1;
+}
+
+.frame-container>.frame-toolbar .frame-toolbar-btn.frame-lock-btn
+{
+  order: 2;
+}
+
+.frame-container>.frame-toolbar .panel-toolbar-btn.formlist-btn
+{
+  order: -1;
+}
+
+.frame-container>.frame-toolbar .panel-toolbar-btn.undo-btn
+{
+  order: -1;
+}
+
+/* hide the menu-button of a frame when the menu is exposed (horizontal tablet) */
+.split-pane-visible .frame-menu-btn:has(ion-icon.ion-md-menu),
+.split-pane-visible .frame-menu-btn:has(ion-icon.ion-ios-menu)
+{
+  display: none;
+}
+
+/* hide the formlist button in list and when unlocked */
+.frame-container.mode-list>.frame-toolbar .panel-toolbar-btn.formlist-btn,
+.frame-container.unlocked>.frame-toolbar .panel-toolbar-btn.formlist-btn
+{
+  display: none;
+}
+
+/* hide the lock in list */
+.frame-container.mode-list>.frame-toolbar .panel-toolbar-btn.frame-lock-btn,
+.frame-container.mode-list> .frame-toolbar-btn.button-fab.frame-lock-btn
+{
+  display: none;
+}
+
+/* hide the insert in form */
+.frame-container.mode-form>.frame-toolbar .panel-toolbar-btn.insert-btn,
+.frame-container.mode-form> .panel-toolbar-btn.button-fab.insert-btn
+{
+  display: none;
+}
+
+/* hide the undo in list */
+.frame-container.mode-list.has-form>.frame-toolbar .panel-toolbar-btn.undo-btn
+{
+  display: none;
+}
+
+/* hide the delete when unlocked and in list*/
+.frame-container.mode-list.has-form:not(.show-mulsel)>.frame-toolbar .panel-toolbar-btn.delete-btn,
+.frame-container.unlocked>.frame-toolbar .panel-toolbar-btn.delete-btn
+{
+  display: none;
+}
+
+/* hide the unlock in detail when unlocked */
+.frame-container.mode-form.unlocked>.frame-toolbar .panel-toolbar-btn.frame-lock-btn,
+.frame-container.mode-form.unlocked>.frame-toolbar-btn.button-fab.frame-lock-btn
+{
+  display: none;
+}
+
+/* hide the multiple selection button in form */
+.frame-container.mode-form>.frame-toolbar .panel-toolbar-btn.multiple-mob-btn
+{
+  display: none;
+}
+
+.frame-toolbar.mobile-toolbar-vertical-container 
+{
+  height: 100px;
+  position: relative;
+  min-height: 100px;
+}
+.frame-toolbar.mobile-toolbar-vertical-container > ion-toolbar
+{
+  margin: 0px;
+}
+.frame-toolbar.mobile-toolbar-vertical-container .toolbar-background 
+{
+  background-color: var(--col-back-toolbar);
+}
+
+/***** PANEL SECTION *****/
+
+ion-row.panel-list-header-row ion-col.panel-list-col
+{
+  color: var(--col-primary);
+  background-image: none;
+  background-color: var(--col-back-10);
+}
+
+.sort-field-indicator-up:after,
+.sort-field-indicator-down:after
+{
+  margin-top: 3px;
+}
+
+.panel-toolbar-btn
+{
+  color: var(--col-fore-button-1);
+}
+
+/***** PANEL GROUP SECTION *****/
+.panel-group-header
+{
+  background-color: var(--col-back-toolbar);
+  color: var(--col-fore-toolbar);
+  box-shadow: 2px 1px 3px rgb(0 0 0 / 40%);
+}
+
+.panel-group-content
+{
+  border-radius: 2px;
+  box-shadow: 4px 4px 4px rgb(0 0 0 / 50%);
+  border: solid 1px var(--col-border-group);
+}
+
+.attach-btn
+{
+  display: none;
+}
+
+/***** BUTTON BAR SECTION *****/
+.item.button-bar-item
+{
+  border: 1px solid rgb(118, 118, 118);
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 10pt;
+  text-align: center;
+  border-radius: 3px;
+  background-color: rgb(239, 239, 239);
+}
+
+
+/***** TABBEDVIEW SECTION *****/
+ion-tabs.tabbed-view-box > ion-tabbar
+{
+  background: var(--col-back-tabbed);
+  height: 50px;
+  justify-content: center;
+}
+
+ion-tabs.tabbed-view-box[tabsplacement=top] > ion-tab.tabbed-view-tab
+{
+  top: 50px;
+}
+
+ion-tabs.tabbed-view-box[tabsplacement=bottom]>ion-tab.tabbed-view-tab
+{
+  height: calc(100% - 50px);
+  bottom: unset;
+}
+
+ion-tabs.tabbed-view-box[tabsplacement=bottom]>ion-tabbar>a.tab-button
+{
+  margin-top: 2px;
+  margin-bottom: 2px;
+  height: 46px;
+}
+
+ion-tabbar > a.tab-button
+{
+  background-color: transparent;
+  color: var(--col-fore-text-1);
+}
+
+ion-tabs.tabbed-view-box > ion-tabbar > .tab-button[aria-selected=true]
+{
+  background: var(--col-back-toolbar);
+  color: var(--col-fore-button-1);
+  border-radius: 2px;
+}
+
+.tab-button .tab-button-text
+{
+  font-size: 12px;
+}
+.tab-button .tab-button-icon[bck="bck"]
+{
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+}
+
+
+/***** TREE SECTION *****/
+.button.treenode-exp-icon,
+.button.group-exp-icon
+{
+  font-size: 16px;
+  color: var(--col-fore-tree-icon);
+  order: 1;
+  height: 24px !important;
+  width: 24px;
+}
+
+ion-item.treenode-header
+{
+  height: 44px;
+  border-bottom: 1px solid var(--col-border-tree);
+  font-size: 13pt;
+  color: var(--col-fore-5);
+}
+ion-item.treenode-header > .item-inner
+{
+  border: none;
+}
+
+.treenode-content
+{
+  margin: 0px;
+}
+
+.tree-drop-hover
+{
+  outline: 2px solid var(--col-border-7);
+}
+
+
+/***** PANEL SECTION *****/
+.panel-list-col
+{
+  /*box-shadow: 1px 0 0 0 #d0d0d0, 0 1px 0 0 #d0d0d0, 1px 1px 0 0 #d0d0d0, 1px 0 0 0 #d0d0d0 inset, 0 1px 0 0 #d0d0d0 inset;*/
+}
+
+.panel-form-row > .panel-form-col-value:not(:has(.show-html))
+{
+  padding: 0px 10px !important;
+}
+
+.panel-statusbar.updated:not(.small)
+{
+  border-radius: 3px;
+  color: #555555;
+  font-size: 1.3rem;
+}
+
+.panel-statusbar.updated.small
+{
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.panel-statusbar.qbe
+{
+  font-weight: bold;
+}
+
+.top-btn, .bottom-btn
+{
+  font-size: 1rem !important;
+}
+
+.prev-btn, .next-btn
+{
+  font-size: 0.7rem !important;
+}
+
+.top-btn.small, .bottom-btn.small
+{
+  font-size: 0.8rem !important;
+}
+
+.prev-btn.small, .next-btn.small
+{
+  font-size: 0.6rem !important;
+}
+
+button.row-selector
+{
+  color: var(--col-fore-text-1);
+  font-size: 10px;
+}
+
+button.row-selector.updated
+{
+  color: var(--col-fore-10);
+}
+
+button.row-selector.error
+{
+  color: var(--col-fore-12);
+}
+
+.button.qbe-tip-btn
+{
+  background-color: transparent;
+}
+
+.button.qbe-tip-btn ion-icon
+{
+  color: var(--col-fore-button-1);
+}
+
+div.panel-form-col-header
+{
+  background: var(--col-back-form-header);
+  padding: 0px !important;
+}
+
+
+/***** PANEL GROUP SECTION *****/
+.panel-list-group
+{
+  background-color: var(--col-back-9);
+}
+
+
+/***** PANEL PAGE SECTION *****/
+.panel-pages-container
+{
+  order: 2;
+  background: var(--col-back-tabbed);
+  justify-content: center;
+  height: 50px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.panel-page
+{
+  color: var(--col-fore-text-1);
+  margin-top: 2px;
+  margin-bottom: 2px;
+  height: 46px;
+}
+
+.panel-page.active
+{
+  background: var(--col-back-toolbar);
+  color: var(--col-fore-button-1);
+}
+
+.panel-page ion-icon
+{
+  color: var(--col-fore-text-1);
+}
+
+.panel-page.active ion-icon
+{
+  color: var(--col-fore-button-1);
+}
+
+
+/***** CONTROL SECTION *****/
+.button.control-button
+{
+  background-color: var(--col-back-4);
+  color: var(--col-fore-button-1);
+}
+
+.button.control-button:focus:after,
+.control-checkbox:has(.item-cover:focus) > .checkbox-icon:after
+{
+  display: none;
+}
+
+.button.control-activator, .button.control-activator.activated
+{
+  background: transparent;
+  color: var(--col-fore-3);
+  font-size: 1rem;
+}
+
+.control-combo ion-list
+{
+  border: 3px solid var(--col-border-modal);
+  border-radius: 4px;
+}
+
+.control-combo .autocomplete-select-item
+{
+  background-color: transparent;
+  opacity: 0.2;
+  box-shadow: var(--col-border-5) 0px -1px 0px 0px inset;
+}
+
+.item.combo-header,
+.item.combo-group-header
+{
+  height: 42px;
+  background-color: var(--col-back-toolbar);
+  text-decoration: none;
+  color: var(--col-fore-button-1);
+}
+
+.control-combo .item.combo-item
+{
+  height: 42px;
+  font-size: 13pt;
+  border-bottom: 1px solid var(--col-border-group) !important;
+}
+
+.control-combo .item.combo-item.item-radio-checked
+{
+  color: var(--col-fore-selected);
+  font-weight: bold;
+}
+
+.control-combo .item.combo-item-disabled
+{
+  text-decoration: none;
+}
+
+.combo-item .item-radio-checked ion-label:not([class=radio-label]) {
+  color: var(--col-fore-selected);
+}
+
+.control-blob-overlay button
+{
+  background-color: transparent;
+  color: var(--col-fore-text-1);
+}
+
+.control-blob-overlay button.activated
+{
+  box-shadow: none;
+  background: transparent;
+}
+
+.control-blob-size
+{
+  color: var(--col-fore-7);
+}
+
+.multiupload-progress
+{
+  background-image: linear-gradient(90deg, var(--col-fore-icon), var(--col-fore-icon)) !important;
+}
+
+.panel-list-col:has(.control-span.mobile-tooltip) 
+{
+  overflow: hidden !important;
+}
+.panel-list-col .control-span.mobile-tooltip 
+{
+  position: absolute;
+  display: block;
+}
+.panel-list-col .control-span.mobile-tooltip h6 
+{
+  margin: 0px;
+  font-size: 9pt;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  overflow: hidden;
+  color: var(--col-fore-tooltip);
+}
+
+/***** BOOK SECTION *****/
+.book-container
+{
+  border: 1px solid var(--col-border-5);
+}
+
+/***** SPAN SECTION *****/
+.book-span-file
+{
+  color: var(--col-fore-7) !important;
+}
+
+/***** MESSAGEBOX SECTION *****/
+
+.class-alertbox .alert-wrapper
+{
+  background: var(--col-back-menu);
+  border: 3px solid var(--col-border-alert);
+}
+
+.class-alertbox .alert-head
+{
+  background-color: var(--col-back-toolbar);
+  color: var(--col-fore-toolbar);
+  border-bottom: 2px dotted var(--col-border-alert-head);
+  font-size: 14pt;
+  font-weight: bold;
+  padding: 10px 10px;
+}
+
+.class-alertbox .alert-message
+{
+  color: var(--col-fore-toolbar);
+  padding: 10px 10px;
+  font-size: 12pt;
+}
+
+.class-alertbox .alert-button-group
+{
+  justify-content: space-around;
+}
+
+.class-alertbox .alert-button
+{
+  min-width: 80px;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 10px;
+  padding: 0;
+  border-radius: 2px;
+  font-size: 10pt;
+  font-weight: normal;
+  text-transform: uppercase;
+  border: 1px solid var(--col-border-modal-button);
+  background-color: var(--col-back-button-modal);
+  color: var(--col-fore-button-1);
+  box-shadow: 0 1px 0 0 rgb(0 0 0 / 40%);
+}
+
+.class-alertbox .alert-button .button-inner
+{
+  justify-content: center;
+}
+
+.class-alertbox .alert-input-group
+{
+  padding: 0px 10px;
+}
+
+.class-alertbox .alert-input
+{
+  border: 1px solid var(--col-border-2);
+  color: var(--col-fore-toolbar);
+}
+
+/***** ERROR POPUP *****/
+
+.error-message-popup .alert-message
+{
+  color: var(--col-fore-5);
+}
+
+.error-message-popup .alert-button
+{
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+  border-radius: 3px;
+  font-size: 10pt;
+  text-transform: uppercase;
+  border: 1px solid var(--col-border-modal-button);
+  background-color: var(--col-back-button-modal);
+  color: var(--col-fore-button-1);
+  cursor: pointer;
+  box-shadow: 0 1px 0 0 rgb(0 0 0 / 40%);
+}
+
+
+/***** PROGRESS BAR *****/
+
+.loading-wrapper.progress-bar-body
+{
+  background: var(--col-back-menu);
+  border: 1px solid var(--col-border-modal-button);
+}
+
+.loading-wrapper.progress-bar-body .loading-content
+{
+  color: var(--col-fore-toolbar);
+  font-size: 14pt;
+}
+
+.progress-bar-body .row-progress .inner
+{
+  background: var(--col-fore-icon);
+}
+
+.loading-wrapper .alert-button-group button
+{
+  border-radius: 3px;
+  text-transform: uppercase;
+  border: none;
+  background-color: var(--col-back-4);
+  color: var(--col-fore-button-1);
+  box-shadow: 0 1px 0 0 rgb(0 0 0 / 60%);
+}
+
+.loading-wrapper .alert-button-group button:hover
+{
+  opacity: 0.8;
+}
+
+.loading-wrapper .alert-button-group button:disabled
+{
+  opacity: 0.5;
+}
+
+
+/***** FILTER POPUP SECTION *****/
+
+.filter-popup-modal div.popover-content
+{
+  border-radius: 0px;
+}
+
+.filter-popup-modal .popover-arrow::after
+{
+  background: var(--col-back-toolbar);
+}
+
+.filter-popup-navbar.toolbar
+{
+  min-height: 50px;
+}
+
+.filter-popup-navbar>.toolbar-background
+{
+  background: var(--col-back-toolbar);
+}
+
+.filter-popup-title .toolbar-title,
+.filter-popup-navbar-buttons .bar-button
+{
+  color: var(--col-fore-toolbar);
+  font-weight: bold;
+}
+
+.filter-popup-footer
+{
+  padding: 10px;
+}
+
+.filter-popup-content>scroll-content
+{
+  height: calc(100% - 106px);
+}
+
+.filter-popup-footer-button.button
+{
+  margin: 0px 10px;
+  background: var(--col-back-button-modal);
+  color: var(--col-fore-button-1);
+}
+
+.filter-popup-footer-button.button.main-action
+{
+  background: var(--col-back-button-1);
+  color: var(--col-fore-button-1);
+}
+
+.filter-popup-button
+{
+  background: var(--col-back-button-1);
+  color: var(--col-fore-button-1);
+}
+
+.filter-popup-item ion-input
+{
+  border-bottom: 1px solid var(--col-border-5);
+}
+
+.filter-popup-item ion-input.ion-autocomplete,
+.filter-popup-item ion-input.control-edit.filter-popup-value-control,
+.filter-popup-item .control-span.filter-popup-value-control
+{
+  border-bottom: 1px solid var(--col-border-5);
+}
+
+/* ------------------------ MENU POPUP ----------------------- */
+
+.ion-menu.menu-popup.with-background button.item
+{
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  padding-left: 35px;
+}
+
+/* ------------------------ SWIPE MENU ----------------------- */
+
+div.swipe-menu 
+{
+  z-index: 9999;
+  position: absolute;
+  width: 70px;
+}
+div.swipe-menu > .swipe-menu-item.danger 
+{
+  height: 100%;
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 5px;
+}
+
+.platform-ios .row-selector-col .control-checkbox {
+  height: 40px;
+}

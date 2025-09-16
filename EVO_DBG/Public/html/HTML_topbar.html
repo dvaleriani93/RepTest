@@ -1,0 +1,36 @@
+<div class="topbar">
+	<div class="logo_evo" onclick="RD3_SendCommand('HOME');" title="$NOMEDB$">
+		<img src="$TOPBAR_LOGO$">
+	</div>
+	<div class='liveclock'>
+		<span id="liveclock"></span>
+	</div>
+	<div class="box_topbar menu_user" style="font-weight:bold;" onclick="RD3_SendCommand('MENUUSER');" onmouseover="makeTooltip(this);" alt="Pannello utente">
+		$USERNOME$ $USERCOGNOME$
+		<i class="fa-light fa-caret-down"></i>
+	</div>
+	<!--
+	<div class="box_topbar">
+		<i class="far fa-user"></i>
+	</div>
+	-->
+	<div id='topbar_impegni' class="box_topbar menu_chat EVO-toolbar-icone" onclick="RD3_SendCommand('Topbar','command=Impegni');" onmouseover="makeTooltip(this);" alt="Calendario impegni personali">
+		<i class="fa-light fa-calendar-days"></i>
+	</div>
+	<div id='topbar_rubrica' class="box_topbar menu_chat EVO-toolbar-icone" onclick="RD3_SendCommand('Topbar','command=Rubrica');" onmouseover="makeTooltip(this);" alt="Rubrica">
+		<i class="fa-light fa-address-book"></i>
+	</div>
+	<!--<div id='menu_chat' class="box_topbar menu_chat EVO-toolbar-icone" onclick="RD3_SendCommand('APRICHAT');">
+		<i class="fa-solid fa-comment-dots"></i>
+	</div>-->
+	<div id='topbar_notifiche' class="box_topbar menu_chat EVO-toolbar-icone" onclick="RD3_SendCommand('Topbar','command=Notifiche');" onmouseover="makeTooltip(this);" alt="Notifiche">
+		<i class="fa-light fa-bell"></i>
+	</div>
+	<div id='menu_CMD' class="box_topbar menu_chat EVO-toolbar-icone" onclick="TopbarMenuCMD()" onmouseover="makeTooltip(this);" alt="Incolla da clipboard">
+		<i class="fa-light fa-command"></i>
+	</div>
+	<div class="box_topbar"></div>
+	<div class="box_topbar"></div>
+	<div class="box_topbar"></div>
+	<div class="box_topbar"></div>
+</div>

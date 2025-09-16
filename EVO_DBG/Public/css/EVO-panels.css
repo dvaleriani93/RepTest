@@ -1,0 +1,37 @@
+/*
+#forms-container{
+     margin-top:30px;
+     margin-left:45px;
+     max-width: calc(100% - 90px);
+     max-height: calc(100% - 30px);
+}
+*/
+
+.EVO-wrapper {
+     top: 0;
+     border-radius: 8px !important;
+     max-height: calc(100% - 30px);
+}
+
+
+
+.EVO-container,
+.EVO-wrapper {
+     width: calc(100% - 30px) !important;
+     background-color: var(--EVO-background-color-evo-filtri-sfondo-bottom) !important;
+     /*border: 1px solid;*/
+}
+
+.EVO-container.EVO-header {
+     border-radius: 8px 8px 0 0 !important;
+}
+
+.EVO-container.EVO-footer {
+     bottom: 28px;
+     border-radius: 0 0 8px 8px !important;
+}
+
+.EVO-border-left {
+     left: 30px;
+     width: calc(100%-60px) !important;
+}

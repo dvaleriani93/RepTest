@@ -1,0 +1,56 @@
+.CMPInterfacciaCorrieri_carousel {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 15px;
+    justify-content: center;
+}
+
+.CMPInterfacciaCorrieri_carousel_card {
+    flex: 50%;
+    text-align: center;
+    /* border: 1px solid red; */
+    margin: 5px;
+    min-height: min-content;
+    transition: 0.5s;
+    padding: 5px;
+    max-width: 23%;
+    /*background-color: #ffffff;*/
+    border-radius: 8px;
+}
+
+.CMPInterfacciaCorrieri_carousel_card__active {
+    transform: scale(1.2);
+    transition: 0.5s;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+.CMPInterfacciaCorrieri_carousel_card__selected {
+    transform: scale(1.2);
+    transition: 0.5s;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    border: 2px solid #B5D4A7;
+}
+
+.CMPInterfacciaCorrieri_carousel_card_logo {
+    display: block;
+    width: 100%;
+    height: 91%;
+}
+
+.CMPInterfacciaCorrieri_carousel_card_logo img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.CMPInterfacciaCorrieri_carousel_card_title {
+    background-color: #1E3478;
+    color: #FFFFFF;
+    font-weight: 500;
+    display: block;
+    bottom: 5px;
+    position: relative;
+    border-radius: 8px;
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Scegli una data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
+ 
+<style type="text/css">
+.CalHeader 
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 11pt; BACKGROUND: #99bbe8; COLOR: #0E4D79; FONT-STYLE: normal; FONT-FAMILY: Tahoma,Sans-serif;
+	position: absolute; left:30px ; top:2px; width:163px; height: 25px; text-align:center; padding-top: 2px;
+	background-image: url('images/captionbg17.gif');
+}
+.CalHeaderArrowSX
+{
+	BACKGROUND: #99bbe8; CURSOR: pointer; COLOR: white;
+	position: absolute; left:3px ; top:2px;
+	background-image: url('images/captionbg17.gif');
+}
+.CalHeaderArrowDX 
+{
+	BACKGROUND: #99bbe8; cursor: pointer; COLOR: white;
+	position: absolute; left:193px ; top:2px;
+	background-image: url('images/captionbg17.gif');
+}
+.CalHeaderWeek
+{
+	position:absolute; left:3px ; top:28px;
+	background-color: #ebf1f1;
+	width: 218px;
+	height: 28px;
+}
+.CloseLink 
+{
+	FONT-WEIGHT: normal; FONT-SIZE: 11pt; COLOR: #0E4D79; FONT-FAMILY: Tahoma,Sans-serif; height: 15px; width:220px;
+	position:absolute; left:3px ; top:204px;  text-align:center;
+}
+.hrdata 
+{
+	position: absolute;
+	top: 4px;
+	width: 31px;
+  height: 24px;
+	font-weight: normal;
+  font-size: 11pt;
+  font-family: Tahoma,Sans-serif;
+	text-align: center;
+  color: #404040;
+}
+.nodata 
+{
+	WIDTH: 31px; POSITION: absolute; HEIGHT: 24px; VERTICAL-ALIGN:middle;
+}
+.sidata 
+{
+	WIDTH: 31px; CURSOR: pointer; POSITION: absolute; HEIGHT: 24px;
+	FONT-WEIGHT: normal; FONT-SIZE: 11pt; FONT-FAMILY: Tahoma,Sans-serif;
+	TEXT-ALIGN: center; COLOR: #404040;
+}
+.wedata 
+{
+	WIDTH: 31px; CURSOR: pointer; POSITION: absolute; HEIGHT: 24px;
+	FONT-WEIGHT: normal; FONT-SIZE: 11pt; FONT-FAMILY: Tahoma,Sans-serif;
+	TEXT-ALIGN: center; COLOR: #404040; BACKGROUND-COLOR: #EBEAD8;
+}
+.wndata 
+{
+	WIDTH: 31px; POSITION: absolute; HEIGHT: 24px;BACKGROUND-COLOR: #EBEAD8;
+}
+.seldata 
+{
+	WIDTH: 31px; POSITION: absolute; HEIGHT: 24px
+}
+</style>
+</head>
+
+<body style="background-image:url(calimages/background.gif);-webkit-background-size:100%" onload="LoadCalendar()">
+<div class="CalHeaderArrowSX" id="PrevDiv"><img id="Prev" onclick="PrevMonth();" height="26px" src="calimages/prev.gif" width="28px" alt=""/></div>
+<div class="CalHeader"><span id="MonthTitle"></span>&nbsp;<span id="YearTitle"></span></div>
+<div class="CalHeaderArrowDX" id="NextDiv"><img id="Next" onclick="NextMonth();" height="26px" src="calimages/next.gif" width="28px" alt=""/></div>
+<div class="CalHeaderWeek" id="WeekHdr"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div id="CalDateContainerFront" style="Z-INDEX: 25; VISIBILITY: visible; POSITION: absolute;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<img id="MonthImg" style="Z-INDEX: 20; LEFT: 3px; VISIBILITY: visible; POSITION: relative; TOP: 57px" height="144px" alt="" src="calimages/blank.gif" width="220px"/><br/>
+<img class="seldata" id="SelDate" onclick="javascript:CloseCalendar()" style="DISPLAY:none;Z-INDEX:40;cursor:pointer" height="24px" alt="" src="calimages/seldt.gif" width="31px"/>
+<a class="CloseLink" href="javascript:CloseCalendar()"></a>
+
+<script type="text/javascript" language="javascript">
+var glbLoaded  = false;
+var DaysSpan   = document.getElementById("CalDateContainerFront").childNodes;
+var MainWindow = window.parent;
+var CalFrame   = MainWindow.document.getElementById("calpopup");
+
+var ImgWidth   = 31;
+var ImgHeight  = 24;
+
+var glbAttDay = -1;
+var glbAttMonth = -1;
+var glbAttYear = -1;
+
+var glbInputDay = -1;
+var glbInputMonth = -1;
+var glbInputYear = -1;
+
+function LoadCalendar() 
+{
+	var browser = window.event ? 1 : 2; //1=IE; 2=altri
+	for(i = 0; i<7; i++) 
+	{
+		for(j = 0; j<6; j++) 
+		{
+			var idx = (j*7)+i;
+			var sp = DaysSpan[idx];
+			if (browser==1)
+				sp.onclick = new Function ("onclick", "ClickData(event)");
+			else
+				sp.setAttribute("onclick", "ClickData(event)");
+			sp.setAttribute("day", idx+1);
+			sp.className = "sidata";
+			sp.style.left = (parseInt(document.getElementById("MonthImg").style.left) + 2 + (ImgWidth*i) - 1)+"px";
+			sp.style.top = (parseInt(document.getElementById("MonthImg").style.top) + 1 + (ImgHeight*j))+"px";
+			sp.style.width = ImgWidth+"px";
+			sp.style.height = ImgHeight+"px";			
+		}
+	}
+}
+
+function ClickData(evento) 
+{
+	var trg = (evento.srcElement)?evento.srcElement:evento.target;
+	if(trg.className == "sidata" || trg.className == "wedata") 
+	{
+		var WhichDay = trg.getAttribute("day");
+		WhichDay -= GetDayOfWeek(1, glbAttMonth, glbAttYear);
+		MainWindow.SetDate(WhichDay, glbAttMonth, glbAttYear);
+		CalFrame.style.display = "none";
+	}	
+	evento.cancelBubble = true;
+}
+
+function NextMonth() 
+{
+	if(glbAttMonth == 12) 
+		SetDate(glbAttDay, 1, glbAttYear+1);
+	else
+		SetDate(glbAttDay, glbAttMonth+1, glbAttYear);
+}
+
+function PrevMonth() 
+{
+	if(glbAttMonth == 1)
+		SetDate(glbAttDay, 12, glbAttYear-1);
+	else
+		SetDate(glbAttDay, glbAttMonth-1, glbAttYear);
+}
+
+function CloseCalendar() 
+{
+	CalFrame.style.display = "none";
+	MainWindow.SetDate(0, 0, 0);
+}
+
+
+function SetInputDate(intDate,intMonth,intYear) 
+{
+	glbInputDay = intDate;
+	glbInputMonth = intMonth;
+	glbInputYear = intYear;
+}
+
+
+function SetDate(vDay, vMonth, vYear) 
+{
+	var TipoVis = "none";
+	var idx;
+
+	if( (glbInputDay != -1) && (vMonth == glbInputMonth) && (vYear == glbInputYear) )	
+	{
+		// Calcolo indice span per data selezionata
+		idx = glbInputDay + GetDayOfWeek(1, glbInputMonth, glbInputYear) - 1;
+		document.getElementById("SelDate").style.left = (parseInt(DaysSpan[idx].style.left) - 1)+"px";
+		document.getElementById("SelDate").style.top = (parseInt(DaysSpan[idx].style.top) - 1)+"px";
+		TipoVis = "block";
+	}
+	document.getElementById("SelDate").style.display = TipoVis;
+	//
+	var i = 0;
+	var iMin = GetDayOfWeek(1, vMonth, vYear);
+	var iMax = MainWindow.DaysInMonth(vMonth, vYear) + GetDayOfWeek(1, vMonth, vYear);
+	//
+	for(i; i<iMin; i++) 
+	{
+		if (i%7>=5)
+			DaysSpan[i].className = "wndata";
+		else
+			DaysSpan[i].className = "nodata";
+		DaysSpan[i].innerHTML = "";
+	}
+	//
+	for(i; i<iMax; i++) 
+	{
+		DaysSpan[i].innerHTML = String(i-iMin+1);
+		if (i%7>=5)
+			DaysSpan[i].className = "wedata";
+		else
+			DaysSpan[i].className = "sidata";
+	}
+	//
+	for(i; i<42; i++) 
+	{
+		if (i%7>=5)
+			DaysSpan[i].className = "wndata";
+		else
+			DaysSpan[i].className = "nodata";
+		DaysSpan[i].innerHTML = "";
+	}
+	document.getElementById("MonthTitle").innerHTML = MainWindow.GetNameOfMonth(vMonth);
+	document.getElementById("YearTitle").innerHTML = String(vYear.toString());
+  var WeekHdrObj =	document.getElementById("WeekHdr");
+	for (var i=0; i<WeekHdrObj.childNodes.length; i++)
+	{
+	  var WeekHdrDObj = WeekHdrObj.childNodes[i];
+  	WeekHdrDObj.innerHTML = MainWindow.DayNames[i];
+  	WeekHdrDObj.className = "hrdata";
+  	WeekHdrDObj.style.left = (i*ImgWidth + 1) + "px";
+  }
+	//
+	glbAttDay = vDay;
+	glbAttMonth = vMonth;
+	glbAttYear = vYear;
+}
+
+function GetDayOfWeek(vDay, vMonth, vYear) 
+{
+	var d = new Date(vYear, vMonth-1, vDay);
+	var g = d.getDay() % 7;
+	if (g==0)
+		g=6;
+	else
+		g--;
+	return(g);
+}
+</script>
+
+<script type="text/javascript" language="javascript">
+glbLoaded = true;
+</script>
+</body>
+</html>

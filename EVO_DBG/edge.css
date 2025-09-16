@@ -1,0 +1,13 @@
+::-ms-clear 
+{
+  display: none;
+}
+
+.panel-scroll-container
+{
+  border: none;
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 13px;
+}

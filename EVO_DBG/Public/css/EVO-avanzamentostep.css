@@ -1,0 +1,36 @@
+/*STEPBAR IN TABLE A BLOCCHI OVALI*/
+.EVO-td-stepbar{
+	border-radius: 5px;  
+   }
+
+/*PER IL MOMENTO IL COLORE LO SCRIVO A MANO MA SARA' DA PRENDERE IN BASE ALLA TABELLA CON UNA VARIABILE*/
+.EVO-td-stepbar-confermati{
+	background-color: #001d69;
+}
+.EVO-td-stepbar-confermati:hover{
+	transition: 0.3s;
+	background: #013832;
+}
+.EVO-td-stepbar-dafare{
+	background-color: #d1d1d1;
+}
+.EVO-td-stepbar-dafare:hover{
+	transition: 0.3s;
+	background-color: #a3a3a3;
+}
+
+.EVO-td-stepbar-scaduti{
+	background-color: #cc0101;
+}
+.EVO-td-stepbar-scaduti:hover{
+	transition: 0.3s;
+	background-color: #b30303;
+}
+
+.EVO-td-stepbar-remember{
+	background-color: #ffa600;
+}
+.EVO-td-stepbar-remember:hover{
+	transition: 0.3s;
+	background-color: #c07d00;
+}

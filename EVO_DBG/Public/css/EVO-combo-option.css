@@ -1,0 +1,39 @@
+
+.combo-popup{
+    box-shadow: 8px 8px 15px 3px rgb(0 0 0 / 30%);
+    border: 1px solid black !important;
+    border-radius: 0px 0px 10px 10px !important;
+    background-color: var(--EVO-background-color-combo-option) !important;
+}
+
+.combo-header {
+    background-color: var(--EVO-background-color-combo-header) !important;
+    color: var(--EVO-color-combo-header) !important;
+}
+
+.combo-option-hiligth {
+    background-color: var(--EVO-background-color-combo-option-hiligth) !important;
+    color: var(--EVO-color-combo-option-hiligth) !important;
+}
+
+.combo-option-selected {
+    background-color: var(--EVO-background-color-combo-option-selected) !important;
+     color: var(--EVO-color-combo-option-selected) !important;
+}
+
+.combo-option-name {
+    color: var(--EVO-color-combo-option-name) !important;
+	font-family: 'OpenSans-SemiBold' !important;
+}
+
+.combo-option-name-hl {
+    color: var(--EVO-color-combo-option-name-h1) !important;
+}
+
+.combo-popup-table{
+
+}
+
+.combo-option{
+    /*background-color: transparent!important;*/
+}
